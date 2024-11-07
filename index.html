@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemas & Mas</title>
+  
+  <!-- Bootstrap CSS Local -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Gemas y más</h1>
+  <!-- Header/Navbar fijo -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Logo con imagen -->
+        <a class="navbar-brand" href="#">
+          <img src="/images/logo.jpg" alt="Gemas & Mas">
+        </a>
+        
+        <!-- Botón de Menú Hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Enlaces de Navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#inicio" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#nosotros" class="nav-link">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="#productos" class="nav-link">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tips" class="nav-link">Tips</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacto" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Sección del Video -->
+  <section id="video-section">
+    <video class="video-embed" autoplay muted loop>
+      <source src="/video/video_inicio.mp4" type="video/mp4">
+      Tu navegador no soporta el formato de video.
+    </video>
+  </section>
+
+  <!-- Contenido debajo del video -->
+  <section id="contenido">
+    <div class="container mt-5">
+      <h1>Bienvenidos a Gemas & Más</h1>
+      <p>Contenido de ejemplo para demostrar cómo el contenido sigue después del video.</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Local (con dependencias incluidas en bootstrap.bundle.min.js) -->
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
