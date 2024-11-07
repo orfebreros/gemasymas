@@ -20,7 +20,7 @@ body {
   
   /* Logo con imagen */
   .navbar-brand img {
-    max-height: 100px;
+    max-height: 50px;
     margin-left: 10px;
   }
   
@@ -41,7 +41,7 @@ body {
     width: 100%;
     height: 100vh; /* El video ocupa toda la ventana */
     background-color: #000; /* Fondo negro si no carga el video */
-    margin-top: 56px; /* El contenido de la página empieza justo después del navbar */
+    margin-top: 92px; /* El contenido de la página empieza justo después del navbar */
     position: relative;
   }
   
@@ -63,3 +63,18 @@ body {
     padding-top: 20px;
   }
   
+
+
+
+
+  .categories
+  {
+    margin-top: 100px;
+  }
+
+  .product {
+    display: none; /* Oculta los productos por defecto */
+}
+.product.active {
+    display: block; /* Muestra solo los productos activos */
+}
