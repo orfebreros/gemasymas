@@ -1,80 +1,84 @@
-/* Asegurar que todo esté con la fuente Roboto */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Navbar fijo en la parte superior */
-  header {
-    position: fixed; /* El navbar está fijo en la parte superior */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1050; /* Asegura que el navbar se quede encima del contenido */
-    background-color: white;
-    padding: 0.5rem 1rem; /* Espaciado ajustado */
-    width: 100%;
-  }
-  
-  /* Logo con imagen */
-  .navbar-brand img {
-    max-height: 50px;
-    margin-left: 10px;
-  }
-  
-  /* Estilos para los enlaces del navbar */
-  .navbar-nav .nav-link {
-    font-size: 1rem;
-    color: #343a40;
-    margin-right: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: blue; /* Cambio de color al pasar el mouse */
-  }
-  
-  /* Sección del video */
-  #video-section {
-    width: 100%;
-    height: 100vh; /* El video ocupa toda la ventana */
-    background-color: #000; /* Fondo negro si no carga el video */
-    margin-top: 92px; /* El contenido de la página empieza justo después del navbar */
-    position: relative;
-  }
-  
-  .video-embed {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* El video cubre toda la sección sin distorsionarse */
-  }
-  
-  /* Asegura que el contenido debajo pase por debajo del navbar */
-  #contenido {
-    margin-top: 100vh; /* El contenido empieza después de la altura del video */
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  /* Añadir padding al contenido para que no se quede pegado a la parte superior */
-  #contenido .container {
-    padding-top: 20px;
-  }
-  
-
-
-
-
-  .categories
-  {
-    margin-top: 100px;
-  }
-
-  .product {
-    display: none; /* Oculta los productos por defecto */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+  
+/* Navbar fijo en la parte superior */
+header {
+  position: fixed; /* El navbar está fijo en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1050; /* Asegura que el navbar se quede encima del contenido */
+  padding: 0.5rem 1rem; /* Espaciado ajustado */
+  width: 100%;
+}
+
+/* Logo con imagen */
+.navbar-brand img {
+  max-height: 50px;
+  margin-left: 10px;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  color: #343a40;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: blue; /* Cambio de color al pasar el mouse */
+}
+
+/* Sección del video */
+#video-section {
+  width: 100vw; /* Ancho completo de la pantalla */
+  height: 100vh; /* Alto completo de la pantalla */
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Quita cualquier margen adicional */
+}
+
+.video-embed {
+  width: 100vw; /* Ancho completo de la pantalla */
+  height: 100vh; /* Alto completo de la pantalla */
+  margin-top: 92px;
+  object-fit: cover; /* Ajuste perfecto para cubrir el contenedor sin perder la relación de aspecto */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+  
+.my-carousel{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+
+/* Asegura que el contenido debajo pase por debajo del navbar */
+.contenido {
+  padding: 3%;
+  text-align: center;
+}
+
+
+.categories
+{
+  margin-top: 100px;
+}
+
+.product {
+  display: none; /* Oculta los productos por defecto */
+}
+
 .product.active {
     display: block; /* Muestra solo los productos activos */
 }
