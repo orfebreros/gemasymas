@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemas & Mas</title>
+    <link rel="icon" href="images/logo2.ico">
+
+    <meta name="author" content="Grupo Orfebreros, S.A.">
+    <meta name="description" content="Vendemos piedra sintética de calidad 5A e insumos para la fabricación de joyería.">
+
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <!-- HEADER Y NAVBAR -->
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
 
           <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="Gemas & Mas">
+            <img src="images/logo2.png" alt="Gemas & Mas">
           </a>
           
-          <!-- Menú hamburguesa -->
+          <!-- MENÚ HAMBURGUESA -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
     
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto" style="color: #ffffff;">
               <li class="nav-item">
                 <a href="#inicio" class="nav-link">Inicio</a>
               </li>
@@ -45,6 +52,7 @@
       </div>
     </header>
     
+    <!-- VIDEO -->
     <section id="video-section">
       <video class="video-embed" autoplay muted loop>
         <source src="video/video_inicio.mp4" type="video/mp4">
@@ -52,6 +60,7 @@
       </video>
     </section>
 
+    <!-- CAROUSEL -->
     <div class="my-carousel">
       <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
@@ -93,11 +102,93 @@
       </div>
     </div>
 
-    <div class="contenido">
+    <!-- DESCRIPCIÓN DE NEGOCIO-->
+    <div class="negocio">
       <h1>Gemas & Más</h1>
       <p>Vendemos piedra sintética de calidad 5A e insumos para la fabricación de joyería.</p>
     </div>
 
+    <!-- TARJETAS -->
+
+    <!-- CLIENTES SATISFECHOS -->
+    <section class="clientes-satisfechos">
+      <div class="container text-center">
+          <h2 class="mb-5">Clientes satisfechos</h2>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="testimonial">
+                      <img src="images-demo/cliente1.jpg" alt="Cliente Elena Paula" class="rounded-circle mb-3 img-fluid">
+                      <h3 class="h5">Nombre Cliente</h3>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="testimonial">
+                      <img src="images-demo/cliente2.jpeg" alt="Cliente Catalina Estévez" class="rounded-circle mb-3 img-fluid">
+                      <h3 class="h5">Nombre cliente</h3>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="testimonial">
+                      <img src="images-demo/cliente3.jpg" alt="Cliente Isabel Mercado" class="rounded-circle mb-3 img-fluid">
+                      <h3 class="h5">Nombre cliente</h3>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+
+    <!-- CONTACTO -->
+    <div class="container">
+      <div class="contact-container row g-5">
+
+        <!-- INFO -->
+        <div class="col-md-6">
+          <img src="images/logo2.png" alt="Logo" class="logo">
+          <h2 class="contact-header">Contáctanos</h2>
+          <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
+          <p class="contact-info"><i class="bi bi-whatsapp"></i> +123-456-7890</p>
+          <p class="contact-info"><i class="bi bi-envelope"></i> hello@reallygreatsite.com</p>
+          <p class="contact-info"><i class="bi bi-instagram"></i> instagram</p>
+          <p class="contact-info"><i class="bi bi-facebook"></i> facebook</p>
+        </div>
+    
+        <!-- FORM -->
+        <div class="col-md-6">
+          <form action="https://formsubmit.co/levi.rosalesg@gmail.com" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Número de teléfono</label>
+              <input type="text" class="form-control" name="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="comments" class="form-label">Mensaje</label>
+              <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit w-100">Enviar</button>
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="linea-footer">
+      <hr>
+    </div>
+    <footer class="text-center p-3">
+      <div id="DevuelveTextoFooterConAnio" class="ligth"></div>
+    </footer>
+
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
