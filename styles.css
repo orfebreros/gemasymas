@@ -11,7 +11,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: #192e5a;
   z-index: 1050; /* Asegura que el navbar se quede encima del contenido */
   padding: 0.5rem 1rem; /* Espaciado ajustado */
   width: 100%;
@@ -26,13 +26,14 @@ header {
 /* Estilos para los enlaces del navbar */
 .navbar-nav .nav-link {
   font-size: 1rem;
-  color: #343a40;
+  
+  color: #ffffff;
   margin-right: 1rem;
   transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-  color: blue; /* Cambio de color al pasar el mouse */
+  color: #ffffff; /* Cambio de color al pasar el mouse */
 }
 
 /* Sección del video */
@@ -55,21 +56,47 @@ header {
 }
   
 .my-carousel{
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding: 5%;
 }
 
 
 
-/* Asegura que el contenido debajo pase por debajo del navbar */
-.contenido {
-  padding: 3%;
+
+.negocio {
+  padding: 2%;
   text-align: center;
 }
 
+.clientes-satisfechos {
+  padding: 2%;
+}
 
+
+/* FORMULARIO */
+.btn-submit {
+  border-color: black;
+}
+.btn-submit:hover {
+  color: #ffffff;
+  background-color: #026322;
+}
+.logo {
+  margin: 0 auto 20px auto;
+  max-width: 200px;
+}
+
+
+
+
+.linea-footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+
+
+/********************************************************************************************************/
 .categories
 {
   margin-top: 100px;
