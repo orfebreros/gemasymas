@@ -72,7 +72,42 @@ header {
 }
 
 
+/*CONTACTO*/
+
+.contact-header{
+  color: #192e5a;
+}
+
+
+  .social-links {
+    display: flex;
+    gap: 15px; /* Espacio entre íconos */
+    justify-content: center; /* Centra los íconos */
+    margin-top: 10px;
+  }
+
+  .social-icon {
+    text-decoration: none;
+    color: #333; /* Color inicial del ícono */
+    font-size: 40px; /* Tamaño de los íconos */
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
+    color: #007bff; /* Cambia de color al hacer hover */
+  }
+
+
+
+
+
 /* FORMULARIO */
+
+.color-label-name{
+  color: #192e5a;
+}
+
 .btn-submit {
   border-color: black;
 }
@@ -82,11 +117,36 @@ header {
 }
 .logo {
   margin: 0 auto 20px auto;
-  max-width: 200px;
+  max-width: 150px;
 }
 
 
+/* Botón de footer */
 
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
 
 .linea-footer {
   padding-left: 5%;
