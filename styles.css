@@ -43,6 +43,23 @@ header {
 
 /* CAROUSEL */
 
+.my-carousel{
+  padding-top: 4.9%;
+}
+
+.carousel-inner img {
+  height: 700px; /* Ajusta la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes se recorten bien */
+}
+
+.carousel-indicators button {
+  background-color: #007bff; /* Cambia el color de los puntitos */
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3; /* Color del puntito activo */
+}
+
 
 
 
@@ -68,6 +85,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative; /* Necesario para posicionar la imagen */
 }
+
 .testimonial-card img {
   width: 80px;
   height: 80px;
@@ -79,6 +97,7 @@ header {
   transform: translateX(-50%);
   border: 3px solid #ffffff; /* Borde blanco para destacar */
 }
+
 .testimonial-card blockquote {
   font-style: italic;
   color: #555555;
@@ -98,9 +117,15 @@ header {
 
 /* Sección general */
 .brands-section {
-  padding-left: 100px;
-  padding-right: 100px;
   overflow: hidden; /* Ocultar logos fuera de los límites */
+}
+
+@media (min-width: 992px) { /* Para pantallas grandes en adelante */
+  .brands-section {
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow: hidden; /* Ocultar logos fuera de los límites */
+  }
 }
 
 /* Contenedor de los logos */
