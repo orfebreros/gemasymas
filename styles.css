@@ -4,8 +4,19 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-  
-/* Navbar fijo en la parte superior */
+
+.estetica-divs
+{
+  padding: 2%;
+}
+
+.h2-style{
+  text-align: center;
+}
+
+
+/* HEADER Y NAVBAR */
+
 header {
   position: fixed; /* El navbar está fijo en la parte superior */
   top: 0;
@@ -17,115 +28,189 @@ header {
   width: 100%;
 }
 
-/* Logo con imagen */
 .navbar-brand img {
   max-height: 50px;
   margin-left: 10px;
 }
 
-/* Estilos para los enlaces del navbar */
 .navbar-nav .nav-link {
   font-size: 1rem;
-  
   color: #ffffff;
   margin-right: 1rem;
   transition: color 0.3s;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffffff; /* Cambio de color al pasar el mouse */
-}
 
-/* Sección del video */
-#video-section {
-  width: 100vw; /* Ancho completo de la pantalla */
-  height: 100vh; /* Alto completo de la pantalla */
-  position: relative;
-  overflow: hidden;
-  margin: 0; /* Quita cualquier margen adicional */
-}
-
-.video-embed {
-  width: 100vw; /* Ancho completo de la pantalla */
-  height: 100vh; /* Alto completo de la pantalla */
-  margin-top: 92px;
-  object-fit: cover; /* Ajuste perfecto para cubrir el contenedor sin perder la relación de aspecto */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-  
-.my-carousel{
-  padding: 5%;
-}
+/* CAROUSEL */
 
 
 
+
+/* NEGOCIO */
 
 .negocio {
-  padding: 2%;
   text-align: center;
 }
 
-.clientes-satisfechos {
-  padding: 2%;
+
+/* TARJETAS */
+
+
+
+/* CLIENTES SATISFECHOS */
+
+.testimonial-card {
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necesario para posicionar la imagen */
+}
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px; /* Posiciona la imagen fuera de la tarjeta */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #ffffff; /* Borde blanco para destacar */
+}
+.testimonial-card blockquote {
+  font-style: italic;
+  color: #555555;
+  margin-top: 50px; /* Añade espacio para la imagen */
+}
+.testimonial-card h5 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+.row.g-4 {
+  margin-top: 60px; /* Espacio para la primera fila con imágenes */
 }
 
 
-/*CONTACTO*/
+/* MARCAS */
 
-.contact-header{
+/* Sección general */
+.brands-section {
+  padding-left: 100px;
+  padding-right: 100px;
+  overflow: hidden; /* Ocultar logos fuera de los límites */
+}
+
+/* Contenedor de los logos */
+.brands-container-wrapper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.brands-container {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Animación continua y más suave */
+  white-space: nowrap; /* Asegura que todos los logos estén en una línea */
+}
+
+/* Logos individuales */
+.brand-logo {
+  margin: 0 40px;
+  width: 120px; /* Tamaño estándar de los logos */
+  height: auto; /* Mantener proporción */
+  filter: grayscale(100%); /* Blanco y negro por defecto */
+  transition: filter 0.3s ease-in-out; /* Transición al pasar el mouse */
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%); /* Volver a color al pasar el mouse */
+}
+
+/* Animación de desplazamiento de los logos */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Mueve todo el contenedor para un flujo infinito */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACTO-INFO */
+
+.logo-contact {
+  margin: 0 auto 20px auto;
+  max-width: 150px;
+}
+
+.label-contact-header{
   color: #192e5a;
 }
 
+.social-links {
+  display: flex;
+  gap: 15px; /* Espacio entre íconos */
+  margin-top: 10px;
+}
 
-  .social-links {
-    display: flex;
-    gap: 15px; /* Espacio entre íconos */
-    justify-content: center; /* Centra los íconos */
-    margin-top: 10px;
-  }
+.social-icon {
+  text-decoration: none;
+  color: #333; /* Color inicial del ícono */
+  font-size: 30px; /* Tamaño de los íconos */
+  transition: transform 0.3s, color 0.3s;
+}
 
-  .social-icon {
-    text-decoration: none;
-    color: #333; /* Color inicial del ícono */
-    font-size: 40px; /* Tamaño de los íconos */
-    transition: transform 0.3s, color 0.3s;
-  }
-
+@media (hover: hover) {
   .social-icon:hover {
     transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
     color: #007bff; /* Cambia de color al hacer hover */
   }
+}
 
 
-
-
-
-/* FORMULARIO */
+/* CONTACTO-FORMULARIO */
 
 .color-label-name{
   color: #192e5a;
 }
 
 .btn-submit {
-  border-color: black;
+  border-color: #026322;
 }
+
 .btn-submit:hover {
   color: #ffffff;
   background-color: #026322;
 }
-.logo {
-  margin: 0 auto 20px auto;
-  max-width: 150px;
+
+
+/* FOOTER */
+
+.linea-footer {
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
-/* Botón de footer */
+/* BOTÓN DE WHATSAPP */
 
 .whatsapp-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 150px;
   right: 20px;
   z-index: 1000;
   display: flex;
@@ -140,23 +225,18 @@ header {
 }
 
 .whatsapp-button img {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
 }
 
 .whatsapp-button:hover {
   transform: scale(1.1);
 }
 
-.linea-footer {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-
-
 
 /********************************************************************************************************/
+
+
 .categories
 {
   margin-top: 100px;
