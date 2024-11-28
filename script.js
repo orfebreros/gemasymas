@@ -1,6 +1,4 @@
-const fecha = new Date();
-var footer = "Copyright © " + fecha.getFullYear() + " Grupo Orfebreros, S.A. All Rights Reserved.";
-document.getElementById("DevuelveTextoFooterConAnio").innerHTML = footer;
+// TARJETAS Y MODAL
 
 document.querySelectorAll('.flip-card-btn').forEach(button => {
     button.addEventListener('click', function () {
@@ -27,7 +25,12 @@ document.querySelectorAll('.flip-card-btn').forEach(button => {
         modalElement.addEventListener('hidden.bs.modal', () => {
           card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
         });
-      }, 600); // Coincide con la duración de la animación de desaparición
+      }, 100); // Trabaja con el estilo de la clase modal-flip
     });
   });
   
+// FOOTER
+
+const fecha = new Date();
+var footer = "Copyright © " + fecha.getFullYear() + " Grupo Orfebreros, S.A. All Rights Reserved.";
+document.getElementById("DevuelveTextoFooterConAnio").innerHTML = footer;

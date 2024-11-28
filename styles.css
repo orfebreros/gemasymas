@@ -5,8 +5,7 @@ body {
   box-sizing: border-box;
 }
 
-.estetica-divs
-{
+.estetica-divs{
   padding: 2%;
 }
 
@@ -44,7 +43,7 @@ header {
 /* CAROUSEL */
 
 .my-carousel{
-  padding-top: 4.9%;
+  padding-top: 4.8%;
 }
 
 .carousel-inner img {
@@ -61,41 +60,69 @@ header {
 }
 
 
-
-
 /* NEGOCIO */
 
 .negocio {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .negocio{
+    margin-top: 50px;
+  }
+}
+
 
 /* TARJETAS */
-/* Contenedor con perspectiva */
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Se asegura que ocupe el 100% del espacio disponible */
+  max-width: 300px; /* Limita el tamaño máximo si es necesario */
+  height: auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  height: auto; /* La altura se ajusta proporcionalmente */
+  display: block;
+}
+
+.curved-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* La capa azul ocupa todo el ancho */
+  height: 30%; /* Puedes ajustar este valor según tus necesidades */
+  background: #192e5a; /* Color azul uniforme */
+  clip-path: ellipse(60% 70% at 50% 100%); /* Curvatura suave hacia arriba */
+  pointer-events: none; /* No bloquea interacciones con la imagen */
+}
+
+/* Resto de tu CSS, sin cambios */
+
 .card-container {
   perspective: 1000px; /* Profundidad para el efecto 3D */
 }
 
-/* Estilo general de las tarjetas */
 .card {
   transition: opacity 0.6s ease, transform 0.6s ease; /* Suavizar el volteo y opacidad */
   transform-style: preserve-3d; /* Habilitar el efecto 3D */
   position: relative;
 }
 
-/* Efecto de desaparición de la tarjeta */
-.card.hide {
+.card.hide { /* esta clase se setea en Javascript */
   opacity: 0; /* Desaparecer la tarjeta */
   visibility: hidden; /* Evitar que ocupe espacio */
 }
 
-/* Estilo de la modal con animación de volteo */
-.modal-flip {
-  animation: flipIn 0.3s ease-in-out; /* Animación al abrir la modal */
+.modal-flip { /* esta clase se setea en Javascript */
+  animation: flipIn 0.4s ease-in-out; /* Animación al abrir la modal */
   transform-origin: center; /* Punto de referencia del volteo */
 }
 
-/* Animación para el efecto de volteo */
 @keyframes flipIn {
   from {
     transform: rotateY(90deg); /* Comienza volteada */
@@ -108,8 +135,6 @@ header {
 }
 
 
-
-
 /* CLIENTES SATISFECHOS */
 
 .testimonial-card {
@@ -120,7 +145,9 @@ header {
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative; /* Necesario para posicionar la imagen */
+  margin: 0px 0px; /* Espacio entre las tarjetas verticalmente */
 }
+
 
 .testimonial-card img {
   width: 80px;
@@ -148,6 +175,16 @@ header {
   margin-top: 60px; /* Espacio para la primera fila con imágenes */
 }
 
+@media (max-width: 767px) {
+  #cliente2, #cliente3{
+    margin-top: 50px;
+  }
+
+  #cliente3{
+    margin-bottom: 40px;
+  }
+}
+
 
 /* MARCAS */
 
@@ -161,6 +198,11 @@ header {
     padding-left: 100px;
     padding-right: 100px;
     overflow: hidden; /* Ocultar logos fuera de los límites */
+  }
+
+  .brands-container{
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 }
 
