@@ -71,6 +71,42 @@ header {
 
 
 /* TARJETAS */
+/* Contenedor con perspectiva */
+.card-container {
+  perspective: 1000px; /* Profundidad para el efecto 3D */
+}
+
+/* Estilo general de las tarjetas */
+.card {
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Suavizar el volteo y opacidad */
+  transform-style: preserve-3d; /* Habilitar el efecto 3D */
+  position: relative;
+}
+
+/* Efecto de desaparición de la tarjeta */
+.card.hide {
+  opacity: 0; /* Desaparecer la tarjeta */
+  visibility: hidden; /* Evitar que ocupe espacio */
+}
+
+/* Estilo de la modal con animación de volteo */
+.modal-flip {
+  animation: flipIn 0.3s ease-in-out; /* Animación al abrir la modal */
+  transform-origin: center; /* Punto de referencia del volteo */
+}
+
+/* Animación para el efecto de volteo */
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg); /* Comienza volteada */
+    opacity: 0; /* Invisible al inicio */
+  }
+  to {
+    transform: rotateY(0deg); /* Aparece de frente */
+    opacity: 1; /* Completamente visible */
+  }
+}
+
 
 
 
