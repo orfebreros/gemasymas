@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemas & Mas</title>
+    <title>Gemas & Mas - Inicio</title>
     <link rel="icon" href="images/logo.ico">
 
     <meta name="author" content="Grupo Orfebreros, S.A.">
@@ -22,7 +22,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
 
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="Gemas & Mas">
           </a>
           
@@ -32,21 +32,21 @@
           </button>
     
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto" style="color: #ffffff;">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="index.html" class="nav-link">Inicio</a>
               </li>
               <li class="nav-item">
-                <a href="#nosotros" class="nav-link">Sobre nosotros</a>
+                <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                <a href="#productos" class="nav-link">Productos</a>
+                <a href="productos.html" class="nav-link">Productos</a>
               </li>
               <li class="nav-item">
-                <a href="#tips" class="nav-link">Tips</a>
+                <a href="tips.html" class="nav-link">Tips</a>
               </li>
               <li class="nav-item">
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="index.html#secContacto" class="nav-link">Contacto</a>
               </li>
             </ul>
           </div>
@@ -65,7 +65,6 @@
     
       <!-- Contenido del Carousel -->
       <div class="carousel-inner">
-        <!-- Slide 1 -->
         <div class="carousel-item active">
           <img src="images-demo/c1.jpg" class="d-block w-100" alt="Slide 1">
           <div class="carousel-caption d-none d-md-block">
@@ -73,7 +72,6 @@
             <p>Este es el primer slide del carousel.</p>
           </div>
         </div>
-        <!-- Slide 2 -->
         <div class="carousel-item">
           <img src="images-demo/c2.jpg" class="d-block w-100" alt="Slide 2">
           <div class="carousel-caption d-none d-md-block">
@@ -81,7 +79,6 @@
             <p>Este es el segundo slide del carousel.</p>
           </div>
         </div>
-        <!-- Slide 3 -->
         <div class="carousel-item">
           <img src="images-demo/c3.jpg" class="d-block w-100" alt="Slide 3">
           <div class="carousel-caption d-none d-md-block">
@@ -112,11 +109,13 @@
     <div class="container">
       <h2 class="h2-style">Piedras y herramientas</h2>
       <div class="row mt-5">
-        <!-- Producto 1 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/piedras/2.png" class="card-img-top" alt="Producto 1">
+              <div class="image-container">
+                <img src="images/piedras/2.png" class="card-img-top" alt="Producto 2">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Beige Casual Bag</h5>
                 <div style="text-align: right;">
@@ -131,43 +130,64 @@
             </div>
           </div>
         </div>
-        <!-- Producto 2 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/piedras/3.png" class="card-img-top" alt="Producto 2">
+              <div class="image-container">
+                <img src="images/piedras/3.png" class="card-img-top" alt="Producto 3">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Brown Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/piedras/3.png" data-title="Brown Casual Bag" data-details="Color: Brown, Material: Tela, Dimensiones: 35x28 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/piedras/3.png"
+                          data-title="Brown Casual Bag"
+                          data-details="Color: Brown, Material: Tela, Dimensiones: 35x28 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Producto 3 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/piedras/4.png" class="card-img-top" alt="Producto 3">
+              <div class="image-container">
+                <img src="images/piedras/4.png" class="card-img-top" alt="Producto 4">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Orange Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/piedras/4.png" data-title="Orange Casual Bag" data-details="Color: Orange, Material: Sintético, Dimensiones: 33x27 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/piedras/4.png"
+                          data-title="Orange Casual Bag"
+                          data-details="Color: Orange, Material: Sintético, Dimensiones: 33x27 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Producto 4 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/piedras/5.png" class="card-img-top" alt="Producto 4">
+              <div class="image-container">
+                <img src="images/piedras/5.png" class="card-img-top" alt="Producto 5">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Green Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/piedras/5.png" data-title="Green Casual Bag" data-details="Color: Green, Material: Nylon, Dimensiones: 32x26 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/piedras/5.png"
+                          data-title="Green Casual Bag"
+                          data-details="Color: Green, Material: Nylon, Dimensiones: 32x26 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
@@ -175,57 +195,85 @@
         </div>
       </div>
       <div class="row">
-        <!-- Producto 5 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/herramientas/6.png" class="card-img-top" alt="Producto 5">
+              <div class="image-container">
+                <img src="images/herramientas/6.png" class="card-img-top" alt="Producto 6">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Pink Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/herramientas/6.png" data-title="Pink Casual Bag" data-details="Color: Pink, Material: Cuero, Dimensiones: 34x28 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/herramientas/6.png"
+                          data-title="Pink Casual Bag"
+                          data-details="Color: Pink, Material: Cuero, Dimensiones: 34x28 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Producto 6 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/herramientas/7.png" class="card-img-top" alt="Producto 6">
+              <div class="image-container">
+                <img src="images/herramientas/7.png" class="card-img-top" alt="Producto 7">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Red Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/herramientas/7.png" data-title="Red Casual Bag" data-details="Color: Red, Material: Lona, Dimensiones: 36x30 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/herramientas/7.png"
+                          data-title="Red Casual Bag"
+                          data-details="Color: Red, Material: Lona, Dimensiones: 36x30 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Producto 7 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/herramientas/8.png" class="card-img-top" alt="Producto 7">
+              <div class="image-container">
+                <img src="images/herramientas/8.png" class="card-img-top" alt="Producto 8">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Blue Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/herramientas/8.png" data-title="Blue Casual Bag" data-details="Color: Blue, Material: Denim, Dimensiones: 31x24 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/herramientas/8.png"
+                          data-title="Blue Casual Bag"
+                          data-details="Color: Blue, Material: Denim, Dimensiones: 31x24 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Producto 8 -->
         <div class="col-6 col-md-3 mb-4">
           <div class="card-container">
             <div class="card">
-              <img src="images/herramientas/9.png" class="card-img-top" alt="Producto 8">
+              <div class="image-container">
+                <img src="images/herramientas/9.png" class="card-img-top" alt="Producto 9">
+                <div class="curved-overlay"></div>
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Yellow Casual Bag</h5>
                 <div style="text-align: right;">
-                  <button class="btn btn-success flip-card-btn" data-image="images/herramientas/9.png" data-title="Yellow Casual Bag" data-details="Color: Yellow, Material: Sintético, Dimensiones: 29x22 cm">Info.</button>
+                  <button class="btn btn-success flip-card-btn"
+                          data-image="images/herramientas/9.png"
+                          data-title="Yellow Casual Bag"
+                          data-details="Color: Yellow, Material: Sintético, Dimensiones: 29x22 cm">
+                    Info.
+                  </button>
                 </div>
               </div>
             </div>
@@ -234,7 +282,7 @@
       </div>
     </div>    
 
-    <!-- MODALES DE TARJETAS -->
+    <!-- MODAL DE TARJETAS -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content modal-flip">
@@ -260,14 +308,12 @@
       </div>
     </div>
 
-
-
     <!-- CLIENTES SATISFECHOS -->
     <div class="container estetica-divs">
       <h2 class="h2-style">Clientes satisfechos</h2>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="testimonial-card">
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card" id="cliente1">
             <img src="images-demo/cliente1.jpg" alt="Client Photo">
             <blockquote>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -275,8 +321,8 @@
             <h5>Nombre Cliente</h5>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card" id="cliente2">
             <img src="images-demo/cliente2.jpeg" alt="Client Photo">
             <blockquote>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -284,8 +330,8 @@
             <h5>Nombre Cliente</h5>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card" id="cliente3">
             <img src="images-demo/cliente3.jpg" alt="Client Photo">
             <blockquote>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -327,54 +373,56 @@
     </div>
 
     <!-- CONTACTO -->
-    <div class="container">
-      <div class="contact-container row g-5">
+    <section id="secContacto">
+      <div class="container">
+        <div class="contact-container row g-5">
+  
+          <!-- INFO -->
+          <div class="col-md-6">
+            <img src="images/logo.png" alt="Logo" class="logo-contact">
+            <h2 class="label-contact-header">Contáctanos</h2>
+            <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
+            <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
+            <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="social-icon">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="social-icon">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>              
+          </div>
+      
+          <!-- FORMULARIO -->
+          <div class="col-md-6">
+            <form action="https://formsubmit.co/9d4b186a4834e5b759d193d939aa22d8" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label color-label-name">Nombre</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label color-label-name">Número de teléfono</label>
+                <input type="text" class="form-control" name="phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label color-label-name">Mensaje</label>
+                <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit w-100">Enviar</button>
+              <input type="hidden" name="_captcha" value="false">
+            </form>
+          </div>
 
-        <!-- INFO -->
-        <div class="col-md-6">
-          <img src="images/logo.png" alt="Logo" class="logo-contact">
-          <h2 class="label-contact-header">Contáctanos</h2>
-          <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
-          <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
-          <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-facebook"></i>
-            </a>
-          </div>              
         </div>
-    
-        <!-- FORMULARIO -->
-        <div class="col-md-6">
-          <form action="https://formsubmit.co/gemasymas19@gmail.com" method="post">
-            <div class="mb-3">
-              <label for="name" class="form-label color-label-name">Nombre</label>
-              <input type="text" class="form-control" name="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label color-label-name">Número de teléfono</label>
-              <input type="text" class="form-control" name="phone" required>
-            </div>
-            <div class="mb-3">
-              <label for="comments" class="form-label color-label-name">Mensaje</label>
-              <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit w-100">Enviar</button>
-            <input type="hidden" name="_captcha" value="false">
-          </form>
-        </div>
-
       </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
     <div class="linea-footer">
