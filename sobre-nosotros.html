@@ -52,31 +52,6 @@
 
 
 
-    <div class="categories">
-        <button onclick="filterProducts('new')">New Collection</button>
-        <button onclick="filterProducts('beige')">Beige Casual Bag</button>
-        <button onclick="filterProducts('brown')">Brown Casual Bag</button>
-        <button onclick="filterProducts('orange')">Orange Casual Bag</button>
-      </div>
-      
-    <div class="products">
-      <div class="product new"> <!-- Productos de New Collection -->
-        <img src="/images/logo.png" alt="New Collection" style="max-height: 150px;">
-        <p>New Collection Product 1</p>
-      </div>
-      <div class="product beige"> <!-- Productos de Beige Casual Bag -->
-        <img src="/images/logo2.png" alt="Beige Casual Bag" style="max-height: 150px;">
-        <p>Beige Casual Bag Product 1</p>
-      </div>
-      <div class="product brown"> <!-- Productos de Brown Casual Bag -->
-        <img src="/images/logo.png" alt="Brown Casual Bag" style="max-height: 150px;">
-        <p>Brown Casual Bag Product 1</p>
-      </div>
-      <div class="product orange"> <!-- Productos de Orange Casual Bag -->
-        <img src="/images/logo2.png" alt="Orange Casual Bag" style="max-height: 150px;">
-        <p>Orange Casual Bag Product 1</p>
-      </div>
-    </div>
 
       <!-- CONTACTO -->
     <div class="container">
@@ -145,22 +120,6 @@
     </a>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function filterProducts(category) {
-        // Oculta todos los productos
-        const products = document.querySelectorAll('.product');
-        products.forEach(product => product.style.display = 'none');
-  
-        // Muestra los productos de la categoría seleccionada
-        const selectedProducts = document.querySelectorAll(`.product.${category}`);
-        selectedProducts.forEach(product => product.style.display = 'block');
-  
-        document.addEventListener('DOMContentLoaded', () => {
-              const allProducts = document.querySelectorAll('.product');
-              allProducts.forEach(product => product.classList.add('active'));
-          });
-      }
-    </script>
 
   </body>
 </html>
