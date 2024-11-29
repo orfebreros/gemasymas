@@ -75,34 +75,6 @@ header {
 
 /* TARJETAS */
 
-.image-container {
-  position: relative;
-  display: inline-block;
-  width: 100%; /* Se asegura que ocupe el 100% del espacio disponible */
-  max-width: 300px; /* Limita el tamaño máximo si es necesario */
-  height: auto;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%; /* La imagen ocupa todo el ancho disponible */
-  height: auto; /* La altura se ajusta proporcionalmente */
-  display: block;
-}
-
-.curved-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; /* La capa azul ocupa todo el ancho */
-  height: 30%; /* Puedes ajustar este valor según tus necesidades */
-  background: #192e5a; /* Color azul uniforme */
-  clip-path: ellipse(60% 70% at 50% 100%); /* Curvatura suave hacia arriba */
-  pointer-events: none; /* No bloquea interacciones con la imagen */
-}
-
-/* Resto de tu CSS, sin cambios */
-
 .card-container {
   perspective: 1000px; /* Profundidad para el efecto 3D */
 }
@@ -272,7 +244,7 @@ header {
 .social-icon {
   text-decoration: none;
   color: #333; /* Color inicial del ícono */
-  font-size: 30px; /* Tamaño de los íconos */
+  font-size: 40px; /* Tamaño de los íconos */
   transition: transform 0.3s, color 0.3s;
 }
 
