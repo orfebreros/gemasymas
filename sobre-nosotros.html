@@ -1,108 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Gemas & Más - Sobre nosotros</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemas & Más - Sobre nosotros</title>
+
+    <meta name="author" content="Grupo Orfebreros, S.A.">
+    <meta name="description" content="Vendemos piedra sintética de calidad 5A e insumos para la fabricación de joyería.">
         
-    <!-- Bootstrap CSS Local -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/sobre-nosotros.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   </head>
   <body>
+
+    <!-- HEADER -->
     <header>
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- Logo con imagen -->
-            <a class="navbar-brand" href="index.html">
-              <img src="/images/logo.png" alt="Gemas & Mas">
-            </a>
-            
-            <!-- Botón de Menú Hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <!-- Enlaces de Navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a href="productos.html" class="nav-link">Productos</a>
-                </li>
-                <li class="nav-item">
-                  <a href="tips.html" class="nav-link">Tips</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#secContacto" class="nav-link">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-
-
-
-      <!-- CONTACTO -->
-    <div class="container">
-      <div class="contact-container row g-5">
-
-        <!-- INFO -->
-        <div class="col-md-6">
-          <img src="images/logo.png" alt="Logo" class="logo-contact">
-          <h2 class="label-contact-header">Contáctanos</h2>
-          <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
-          <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
-          <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-facebook"></i>
-            </a>
-          </div>              
-        </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Gemas & Mas">
+          </a>
+          
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
     
-        <!-- FORMULARIO -->
-        <div class="col-md-6">
-            <form action="https://formsubmit.co/9d4b186a4834e5b759d193d939aa22d8" method="post">
-            <div class="mb-3">
-              <label for="name" class="form-label color-label-name">Nombre</label>
-              <input type="text" class="form-control" name="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label color-label-name">Número de teléfono</label>
-              <input type="text" class="form-control" name="phone" required>
-            </div>
-            <div class="mb-3">
-              <label for="comments" class="form-label color-label-name">Mensaje</label>
-              <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit w-100">Enviar</button>
-            <input type="hidden" name="_next" value="https://levirosales98.github.io/gemasymas/#secContacto">
-            <input type="hidden" name="_captcha" value="false">
-          </form>
-        </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a href="productos.html" class="nav-link">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a href="tips.html" class="nav-link">Tips</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#secContacto" class="nav-link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
+    <!-- SOBRE NOSOTROS -->
+    <div class="container about-us">
+      <div class="row align-items-center header-main justify-content-center">
+        <div class="col-md-7">
+          <h1 class="">Sobre nosotros</h1>
+          <p>
+            Gemas y más, inició sus labores en agosto del año 2019 en la ciudad de Guatemala, con el propósito de contribuir a
+            un mejor futuro para las familias guatemaltecas. La idea surgió cuando los socios notaron la creciente necesidad de
+            piedras sintéticas e insumos más accesibles ya que distintas tiendas no lograban satisfacer las exigencias y gustos
+            de los orfebres guatemaltecos. 
+          </p>
+          <p>
+            Desde sus inicios ha abastecido su tienda con productos extranjeros de la más alta calidad, durante su trayecto ha
+            logrado ampliar su línea de insumos para facilitar el trabajo de sus clientes y poder presentarles una opción rápida
+            y segura.
+          </p>
+        </div>
+        <div class="col-8 col-md-4">
+          <img src="images/piedras/2.png" alt="Antecedentes" class="w-100 my-class-photo">
+        </div>
+      </div>
+      <div class="linea-principal">
+        <hr>
       </div>
     </div>
+
+    <!-- VISIÓN, MISIÓN, VALORES -->
+    <div class="container">
+
+      <div class="row align-items-center header-main justify-content-center">
+        <div class="col-lg-6 content order-lg-2 order-1"> <!-- pt-5 baja el texto -->
+          <h3 class="text-center text-lg-start">Misión</h3>
+          <p>
+            Somos una empresa 100% guatemalteca dedicada a la venta de piedras sintéticas e insumos de la más alta calidad para
+            la fabricación de joyas en oro y plata, nuestro propósito es facilitar el trabajo de los orfebres, ofreciendo una
+            opción rápida y segura de insumos confiables para que nuestros clientes puedan crear piezas únicas.
+          </p>
+        </div>
+        <div class="col-lg-6 order-lg-1 order-2 about-us-images-container">
+          <img src="images/marcas/1.png" class="img-fluid about-us-images" alt="Leví Rosales">
+        </div>
+      </div>
+
+      <div class="row align-items-center header-main justify-content-center">
+        <div class="col-lg-6 content order-lg-1 order-1">
+          <h3 class="text-center text-lg-start">Visión</h3>
+          <p>
+            Ser la mayor tienda de insumos para joyería de Guatemala, reconocida por su compromiso con la innovación, el mejor
+            servicio al cliente y la excelencia en cada producto, y así poder contribuir con el crecimiento y el profesionalismo
+            del sector joyero de Guatemala.   
+          </p>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-2 about-us-images-container">
+          <img src="images/marcas/1.png" class="img-fluid about-us-images" alt="Leví Rosales">
+        </div>
+      </div>
+
+      <div class="row align-items-center header-main justify-content-center">
+        <div class="col-lg-6 content order-lg-2 order-1">
+          <h3 class="text-center text-lg-start">Valores</h3>
+          <ul>
+            <p><li>
+              <strong>Calidad:</strong> Estamos comprometidos a ofrecer gemas sintéticas e insumos para la fabricación de joyas
+              en oro y plata de alta calidad, que cumplan con los estándares más exigentes, asegurando la durabilidad de los productos.
+            </li></p>
+            <p><li>
+              <strong>Compromiso con el cliente:</strong> Aspiramos a fidelizar a nuestros clientes, brindándoles asesoría
+              personalizada y soporte a cada joyero, para que estos alcancen sus objetivos con seguridad.
+            </li></p>
+            <p><li>
+              <strong>Innovación:</strong> Nos esforzamos en mantenernos al día en tendencias y tecnología, para facilitar el
+              trabajo de nuestros clientes.
+            </li></p>
+            <p><li>
+              <strong>Responsabilidad:</strong> Operamos con la mayor ética posible, garantizando prácticas transparentes y un
+              compromiso firme con nuestros empleados, clientes y entorno.
+            </li></p>
+          </ul>          
+          <br>
+        </div>
+        <div class="col-lg-6 order-lg-1 order-2 about-us-images-container">
+          <img src="images/marcas/1.png" class="img-fluid about-us-images" alt="Leví Rosales">
+        </div>
+      </div>
+
+      <div class="row align-items-center header-main justify-content-center">
+        <div class="col-lg-6 content order-lg-1 order-1">
+          <h3 class="text-center text-lg-start">Música</h3>
+          <p>
+            La música es algo con lo que me identifio. Estoy escuchando música todo el tiempo, mientras
+            estudio, trabajo o conduzco. No tengo un género con el cual identificarme, simplemente
+            disfruto la melodía y letra que me gusta. Te comparto mi perfil de Spotify para que
+            me sigas, también están disponibles todas mis playlist tocando el botón verde 🎧
+          </p>
+          <br>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-2 about-us-images-container">
+          <img src="images/marcas/1.png" class="img-fluid about-us-images" alt="Leví Rosales">
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section id="secContacto">
+      <div class="container">
+        <div class="contact-container row g-5">
+  
+          <!-- INFO -->
+          <div class="col-md-6">
+            <img src="images/logo.png" alt="Logo" class="logo-contact">
+            <h2 class="label-contact-header">Contáctanos</h2>
+            <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
+            <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
+            <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="social-icon">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="social-icon">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>              
+          </div>
+      
+          <!-- FORMULARIO -->
+          <div class="col-md-6">
+            <form action="https://formsubmit.co/9d4b186a4834e5b759d193d939aa22d8" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label color-label-name">Nombre</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label color-label-name">Número de teléfono</label>
+                <input type="text" class="form-control" name="phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label color-label-name">Mensaje</label>
+                <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit w-100">Enviar</button>
+              <input type="hidden" name="_next" value="https://levirosales98.github.io/gemasymas/#secContacto">
+              <input type="hidden" name="_captcha" value="false">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <div class="linea-footer">
@@ -121,6 +223,6 @@
     </a>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="script.js"></script>
   </body>
 </html>
