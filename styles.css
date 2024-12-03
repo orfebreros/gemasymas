@@ -1,5 +1,4 @@
 body {
-  margin-bottom: 92px;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -26,7 +25,6 @@ header {
   z-index: 1050; /* Asegura que el navbar se quede encima del contenido */
   padding: 0.5rem 1rem; /* Espaciado ajustado */
   width: 100%;
-  height: 92px;
 }
 
 .navbar-brand img {
@@ -49,16 +47,16 @@ header {
 }
 
 .carousel-inner img {
-  height: auto; /* Ajusta la altura de las imágenes */
+  height: 500px; /* Ajusta la altura de las imágenes OJO QUE AQUI IBAN LOS 700PX*/
   object-fit: cover; /* Asegura que las imágenes se recorten bien */
 }
 
 .carousel-indicators button {
-  background-color: #007bff; /* Cambia el color de los puntitos */
+  background-color: #026322; /* Cambia el color de los puntitos */
 }
 
 .carousel-indicators .active {
-  background-color: #0056b3; /* Color del puntito activo */
+  background-color: #026322; /* Color del puntito activo */
 }
 
 
@@ -162,7 +160,6 @@ header {
 
 /* MARCAS */
 
-/* Sección general */
 .brands-section {
   overflow: hidden; /* Ocultar logos fuera de los límites */
 }
@@ -215,15 +212,6 @@ header {
     transform: translateX(-50%); /* Mueve todo el contenedor para un flujo infinito */
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* CONTACTO-INFO */
