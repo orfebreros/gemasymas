@@ -53,11 +53,11 @@ header {
 }
 
 .carousel-indicators button {
-  background-color: #007bff; /* Cambia el color de los puntitos */
+  background-color: #026322; /* Cambia el color de los puntitos */
 }
 
 .carousel-indicators .active {
-  background-color: #0056b3; /* Color del puntito activo */
+  background-color: #026322; /* Color del puntito activo */
 }
 
 
