@@ -47,7 +47,7 @@ header {
 }
 
 .carousel-inner img {
-  height: 500px; /* Ajusta la altura de las imágenes OJO QUE AQUI IBAN LOS 700PX*/
+  height: 700px; /* Ajusta la altura de las imágenes OJO QUE AQUI IBAN LOS 700PX*/
   object-fit: cover; /* Asegura que las imágenes se recorten bien */
 }
 
