@@ -4,12 +4,13 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Gemas & Más - Productos</title>
+      <link rel="icon" href="images/logo.ico">
         
     <!-- Bootstrap CSS Local -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/productos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -46,34 +47,6 @@
           </nav>
         </div>
       </header>
-
-
-
-    <div class="categories">
-        <button onclick="filterProducts('new')">New Collection</button>
-        <button onclick="filterProducts('beige')">Beige Casual Bag</button>
-        <button onclick="filterProducts('brown')">Brown Casual Bag</button>
-        <button onclick="filterProducts('orange')">Orange Casual Bag</button>
-      </div>
-      
-    <div class="products">
-      <div class="product new"> <!-- Productos de New Collection -->
-        <img src="/images/logo.png" alt="New Collection" style="max-height: 150px;">
-        <p>New Collection Product 1</p>
-      </div>
-      <div class="product beige"> <!-- Productos de Beige Casual Bag -->
-        <img src="/images/logo2.png" alt="Beige Casual Bag" style="max-height: 150px;">
-        <p>Beige Casual Bag Product 1</p>
-      </div>
-      <div class="product brown"> <!-- Productos de Brown Casual Bag -->
-        <img src="/images/logo.png" alt="Brown Casual Bag" style="max-height: 150px;">
-        <p>Brown Casual Bag Product 1</p>
-      </div>
-      <div class="product orange"> <!-- Productos de Orange Casual Bag -->
-        <img src="/images/logo2.png" alt="Orange Casual Bag" style="max-height: 150px;">
-        <p>Orange Casual Bag Product 1</p>
-      </div>
-    </div>
 
       <!-- CONTACTO -->
     <div class="container">
@@ -118,6 +91,7 @@
               <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
             </div>
             <button type="submit" class="btn btn-submit w-100">Enviar</button>
+            <input type="hidden" name="_next" id="_next">
             <input type="hidden" name="_captcha" value="false">
           </form>
         </div>
@@ -129,7 +103,7 @@
     <div class="linea-footer">
       <hr>
     </div>
-    <footer class="text-center p-3">
+    <footer class="text-center p-3 mb-3">
       <div id="DevuelveTextoFooterConAnio" class="ligth"></div>
     </footer>
 
@@ -142,22 +116,7 @@
     </a>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function filterProducts(category) {
-        // Oculta todos los productos
-        const products = document.querySelectorAll('.product');
-        products.forEach(product => product.style.display = 'none');
-  
-        // Muestra los productos de la categoría seleccionada
-        const selectedProducts = document.querySelectorAll(`.product.${category}`);
-        selectedProducts.forEach(product => product.style.display = 'block');
-  
-        document.addEventListener('DOMContentLoaded', () => {
-              const allProducts = document.querySelectorAll('.product');
-              allProducts.forEach(product => product.classList.add('active'));
-          });
-      }
-    </script>
+    <script src="js/productos.js"></script>
 
   </body>
 </html>

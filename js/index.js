@@ -18,7 +18,7 @@ document.querySelectorAll('.flip-card-btn').forEach(button => {
       const activeClass = index === 0 ? 'active' : ''; // La primera imagen estará activa
       const carouselItem = `
         <div class="carousel-item ${activeClass}">
-          <img src="${image}" class="d-block w-100" alt="Producto">
+          <img src="${image}" class="d-block" alt="Producto" style="width: 100%; height: 100%;">
         </div>
       `;
       carouselInner.innerHTML += carouselItem; // Agregar la imagen al carousel
@@ -48,3 +48,13 @@ document.querySelectorAll('.flip-card-btn').forEach(button => {
 const fecha = new Date();
 var footer = "Copyright © " + fecha.getFullYear() + " Grupo Orfebreros, S.A. All Rights Reserved.";
 document.getElementById("DevuelveTextoFooterConAnio").innerHTML = footer;
+
+
+// FORMSUBMIT REDIRECT URL
+
+fetch('config.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('_next').value = data.prodUrl + 'index.html#secContacto';
+  })
+  .catch(error => console.error('Error al cargar archivo JSON:', error));
