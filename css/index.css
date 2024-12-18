@@ -297,20 +297,3 @@ header {
 .whatsapp-button:hover {
   transform: scale(1.1);
 }
-
-
-/********************************************************************************************************/
-
-
-.categories
-{
-  margin-top: 100px;
-}
-
-.product {
-  display: none; /* Oculta los productos por defecto */
-}
-
-.product.active {
-    display: block; /* Muestra solo los productos activos */
-}

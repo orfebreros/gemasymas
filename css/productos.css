@@ -3,20 +3,20 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.estetica-divs{
+  }
+  
+  .estetica-divs{
     padding: 2%;
-}
-
-.h2-style{
+  }
+  
+  .h2-style{
     text-align: center;
-}
-
-
-/* HEADER Y NAVBAR */
-
-header {
+  }
+  
+  
+  /* HEADER Y NAVBAR */
+  
+  header {
     position: fixed; /* El navbar está fijo en la parte superior */
     top: 0;
     left: 0;
@@ -40,32 +40,12 @@ header {
   }
 
 
-/* SOBRE NOSOSTROS */
 
-.about-us{
-    margin-top: 100px;
-}
-
-@media (max-width: 767px) {
-    .linea-principal{
-        margin-bottom: 50px;
-    }
-}
-
-.about-us-images-container{
-    text-align: center;
-}
-
-.about-us-images{
-    max-width: 300px; /* El ancho máximo es el 100% del contenedor */
-    max-height: 300px; /* El alto máximo es 100px */
-    width: auto; /* Permite ajustar el ancho automáticamente */
-    height: auto; /* Permite ajustar la altura automáticamente */
-}
+  
 
 
 
-/* CONTACTO-INFO */
+  /* CONTACTO-INFO */
 
 .logo-contact {
     margin: 0 auto 20px auto;
