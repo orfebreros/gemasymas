@@ -15,97 +15,131 @@
   </head>
   <body>
     <header>
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="Gemas & Mas">
-            </a>
-            
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a href="productos.html" class="nav-link">Productos</a>
-                </li>
-                <li class="nav-item">
-                  <a href="tips.html" class="nav-link">Tips</a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.html#secContacto" class="nav-link">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <!-- CONTACTO -->
-    <div class="container">
-      <div class="contact-container row g-5">
-
-        <!-- INFO -->
-        <div class="col-md-6">
-          <img src="images/logo.png" alt="Logo" class="logo-contact">
-          <h2 class="label-contact-header">Contáctanos</h2>
-          <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
-          <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
-          <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-icon">
-              <i class="bi bi-facebook"></i>
-            </a>
-          </div>              
-        </div>
-    
-        <!-- FORMULARIO -->
-        <div class="col-md-6">
-          <form action="https://formsubmit.co/9d4b186a4834e5b759d193d939aa22d8" method="post">
-            <div class="mb-3">
-              <label for="name" class="form-label color-label-name">Nombre</label>
-              <input type="text" class="form-control" name="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label color-label-name">Número de teléfono</label>
-              <input type="text" class="form-control" name="phone" required>
-            </div>
-            <div class="mb-3">
-              <label for="comments" class="form-label color-label-name">Mensaje</label>
-              <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit w-100">Enviar</button>
-            <input type="hidden" name="_next" id="_next">
-            <input type="hidden" name="_captcha" value="false">
-          </form>
-        </div>
-
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Gemas & Mas">
+          </a>
+          
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a href="productos.html" class="nav-link">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a href="tips.html" class="nav-link">Tips</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#secContacto" class="nav-link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
+    </header>
+
+    <!-- Sidebar -->
+  <div id="sidebar">
+    <h4>Categorías</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          data-bs-toggle="collapse"
+          data-bs-target="#categorias"
+          aria-expanded="false"
+          aria-controls="categorias"
+        >
+          Categorías
+        </a>
+        <ul class="collapse" id="categorias">
+          <li><a class="nav-link ms-3" href="#">Categoría 1</a></li>
+          <li><a class="nav-link ms-3" href="#">Categoría 2</a></li>
+          <li><a class="nav-link ms-3" href="#">Categoría 3</a></li>
+          <li><a class="nav-link ms-3" href="#">Categoría 4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    
+
+    <div id="content">
+      <!---->
+      <div class="container productos-container">
+        TARJETAS DE PRODUCTOS
+      </div>
+      <!-- CONTACTO -->
+      <div class="container">
+        <div class="contact-container row g-5">
+
+          <!-- INFO -->
+          <div class="col-md-6">
+            <img src="images/logo.png" alt="Logo" class="logo-contact">
+            <h2 class="label-contact-header">Contáctanos</h2>
+            <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
+            <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
+            <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="social-icon">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/share/19ZpHd3z6t/?mibextid=LQQJ4d" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="social-icon">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>              
+          </div>
+      
+          <!-- FORMULARIO -->
+          <div class="col-md-6">
+            <form action="https://formsubmit.co/9d4b186a4834e5b759d193d939aa22d8" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label color-label-name">Nombre</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label color-label-name">Número de teléfono</label>
+                <input type="text" class="form-control" name="phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label color-label-name">Mensaje</label>
+                <textarea class="form-control" name="comments" rows="5" style="resize: none;" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit w-100">Enviar</button>
+              <input type="hidden" name="_next" id="_next">
+              <input type="hidden" name="_captcha" value="false">
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="linea-footer">
+        <hr>
+      </div>
+      <footer class="text-center p-3 mb-3">
+        <div id="DevuelveTextoFooterConAnio" class="ligth"></div>
+      </footer>
     </div>
 
-    <!-- FOOTER -->
-    <div class="linea-footer">
-      <hr>
-    </div>
-    <footer class="text-center p-3 mb-3">
-      <div id="DevuelveTextoFooterConAnio" class="ligth"></div>
-    </footer>
+
 
     <!-- BOTÓN DE WHATSAPP -->
     <a href="https://wa.me/50236527420?text=Hola,%20necesito%20información." 

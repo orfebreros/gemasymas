@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    height: 100vh;
   }
   
   .estetica-divs{
@@ -38,6 +40,34 @@ body {
     margin-right: 1rem;
     transition: color 0.3s;
   }
+
+
+
+
+
+
+
+  #sidebar {
+    margin-top: 92px;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+  }
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+.productos-container{
+  margin-top: 92px;
+}
+  
+
+
 
 
 
