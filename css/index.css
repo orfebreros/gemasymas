@@ -166,8 +166,6 @@ header {
 
 @media (min-width: 992px) { /* Para pantallas grandes en adelante */
   .brands-section {
-    padding-left: 100px;
-    padding-right: 100px;
     overflow: hidden; /* Ocultar logos fuera de los límites */
   }
 
@@ -197,10 +195,6 @@ header {
   height: auto; /* Mantener proporción */
   filter: grayscale(100%); /* Blanco y negro por defecto */
   transition: filter 0.3s ease-in-out; /* Transición al pasar el mouse */
-}
-
-.brand-logo:hover {
-  filter: grayscale(0%); /* Volver a color al pasar el mouse */
 }
 
 /* Animación de desplazamiento de los logos */

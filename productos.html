@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Gemas & Más - Productos</title>
-      <link rel="icon" href="images/logo.ico">
-        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemas & Más - Productos</title>
+    <link rel="icon" href="images/logo.ico">
     <!-- Bootstrap CSS Local -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/productos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -97,14 +95,16 @@
             <div class="col-6 col-md-3 mb-4">
               <div class="card-container">
                 <div class="card">
-                  <img src="images/piedras/2.png" class="card-img-top" alt="Producto 2">
+                  <img src="images/piedras/marquesa/marquesa_amatista.png" class="card-img-top" alt="Producto 2">
                   <div class="card-body text-center">
                     <h5 class="card-title">Marquesa</h5>
                     <div style="text-align: right;">
                       <button class="btn btn-success flip-card-btn" 
-                              data-image="images/piedras/2.png,images/piedras/3.png,images/piedras/4.png" 
-                              data-title="Beige Casual Bag" 
-                              data-details="Color: Beige, Material: Cuero, Dimensiones: 30x25 cm">
+                              data-image="images/piedras/marquesa/marquesa_amatista.png,images/piedras/marquesa/marquesa_anaranjado.png,images/piedras/marquesa/marquesa_champagne.png,images/piedras/marquesa/marquesa_circon_azul.png,images/piedras/marquesa/marquesa_esmeralda.png,images/piedras/marquesa/marquesa_lavanda.png,images/piedras/marquesa/marquesa_onix.png,images/piedras/marquesa/marquesa_rosa_francia.png,images/piedras/marquesa/marquesa_rubi.png,images/piedras/marquesa/marquesa_verde_peridote.png,images/piedras/marquesa/marquesa_zafiro.png,images/piedras/marquesa/marquesa_zirconia.png"
+                              data-title="Marquesa" 
+                              data-details="Piedra marquesa sintética calida 5A. Cuenta con variedad de colores y medidas. Es una alternativa económica a la piedra natural"
+                              data-measurements="Medidas en milímetros: 2x4 5x2.5 6x3 8x4 10x5 12x6 14x7"
+                              data-colors="Colores: Amatista, Anaranjado, Champagne, Circón Azul, Esmeralda, Lavanda, Onix, Rosa Francia, Rubí, Verde Peridote, Zafiro, Zirconia">
                         Info.
                       </button>
                     </div>
@@ -318,36 +318,42 @@
         </div>    
 
         <!-- MODAL DE TARJETAS -->
-        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-flip">
-              <div class="modal-header">
-                <h5 class="modal-title" id="infoModalLabel">Detalles del Producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6 text-center">
-                    <!-- Carousel de imágenes -->
-                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                      <!-- Indicadores (Puntitos) -->
-                      <div class="carousel-indicators">
-                        <button type="button" style="background-color: black;" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" style="background-color: black;" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" style="background-color: black;" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content modal-flip">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="infoModalLabel">Detalles</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6 text-center">
+                      <!-- Carousel de imágenes -->
+                      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" id="carouselImages"></div>
+
+                        <!-- Controles de navegación -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
                       </div>
-                      <div class="carousel-inner" id="carouselImages"></div>
-                    </div>                
-                  </div>
-                  <div class="col-md-6">
-                    <h5 id="modalProductTitle"></h5>
-                    <p id="modalProductDetails"></p>
+                    </div>
+                    <div class="col-md-6">
+                      <h5 id="modalProductTitle"></h5>
+                      <p id="modalProductDetails"></p>
+                      <p id="modalProductMeasurements"></p>
+                      <p id="modalProductColors"></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <!-- CONTACTO -->
@@ -359,7 +365,7 @@
             <img src="images/logo.png" alt="Logo" class="logo-contact">
             <h2 class="label-contact-header">Contáctanos</h2>
             <p>Contáctenos para preguntas, asistencia técnica u oportunidades de colaboración a través de la información de contacto proporcionada.</p>
-            <p class="contact-info"><i class="bi bi-telephone"></i> +502 36527420</p>
+            <p class="contact-info"><i class="bi bi-telephone"></i> +502 3652 7420</p>
             <p class="contact-info"><i class="bi bi-envelope"></i> gemasymas19@gmail.com</p>
             <div class="social-links">
               <a href="https://www.instagram.com/gema.symas/?igsh=cjF0NDRiNGF5ZWNv" 
