@@ -77,84 +77,88 @@ body {
 
   /* CONTACTO-INFO */
 
+#secContacto{
+  margin-top: 92px;
+}
+
 .logo-contact {
-    margin: 0 auto 20px auto;
-    max-width: 150px;
+  margin: 0 auto 20px auto;
+  max-width: 150px;
+}
+
+.label-contact-header{
+  color: #192e5a;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Espacio entre íconos */
+  margin-top: 10px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: #333; /* Color inicial del ícono */
+  font-size: 40px; /* Tamaño de los íconos */
+  transition: transform 0.3s, color 0.3s;
+}
+
+@media (hover: hover) {
+  .social-icon:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
+    color: #007bff; /* Cambia de color al hacer hover */
   }
-  
-  .label-contact-header{
-    color: #192e5a;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 15px; /* Espacio entre íconos */
-    margin-top: 10px;
-  }
-  
-  .social-icon {
-    text-decoration: none;
-    color: #333; /* Color inicial del ícono */
-    font-size: 40px; /* Tamaño de los íconos */
-    transition: transform 0.3s, color 0.3s;
-  }
-  
-  @media (hover: hover) {
-    .social-icon:hover {
-      transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
-      color: #007bff; /* Cambia de color al hacer hover */
-    }
-  }
+}
   
   
-  /* CONTACTO-FORMULARIO */
-  
-  .color-label-name{
-    color: #192e5a;
-  }
-  
-  .btn-submit {
-    border-color: #026322;
-  }
-  
-  .btn-submit:hover {
-    color: #ffffff;
-    background-color: #026322;
-  }
-  
-  
-  /* FOOTER */
-  
-  .linea-footer {
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  
-  
-  /* BOTÓN DE WHATSAPP */
-  
-  .whatsapp-button {
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .whatsapp-button img {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .whatsapp-button:hover {
-    transform: scale(1.1);
-  }
+/* CONTACTO-FORMULARIO */
+
+.color-label-name{
+  color: #192e5a;
+}
+
+.btn-submit {
+  border-color: #026322;
+}
+
+.btn-submit:hover {
+  color: #ffffff;
+  background-color: #026322;
+}
+
+
+/* FOOTER */
+
+.linea-footer {
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+/* BOTÓN DE WHATSAPP */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 45px;
+  height: 45px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
