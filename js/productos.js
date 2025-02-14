@@ -1,19 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // TARJETAS Y MODAL
+    // TARJETAS Y MODAL DE PIEDRAS
     document.querySelectorAll('.flip-card-btn').forEach(button => {
         button.addEventListener('click', function () {
             const images = this.getAttribute('data-image').split(',');
-            const title = this.getAttribute('data-title');
-            const details = this.getAttribute('data-details');
-            const measurements = this.getAttribute('data-measurements');
-            const colors = this.getAttribute('data-colors');
 
-            // Actualizar contenido de la modal
-            document.getElementById('modalProductTitle').textContent = title;
-            document.getElementById('modalProductDetails').textContent = details;
-            document.getElementById('modalProductMeasurements').textContent = measurements;
-            document.getElementById('modalProductColors').textContent = colors;
+            // Actualizar la información de la modal
+            document.getElementById('modalProductTitle').textContent = this.getAttribute('data-title');
+            document.getElementById('modalProductDetails').textContent = this.getAttribute('data-details');
+            document.getElementById('modalProductMeasurements').textContent = this.getAttribute('data-measurements');
+            document.getElementById('modalProductColors').textContent = this.getAttribute('data-colors');
             
             // Crear las imágenes del carousel
             const carouselInner = document.getElementById('carouselImages');
@@ -23,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const activeClass = index === 0 ? 'active' : ''; // La primera imagen estará activa
                 const carouselItem = `
                 <div class="carousel-item ${activeClass}">
-                    <img src="${image}" class="d-block" alt="Piedra" style="width: 100%; height: 100%;">
+                    <img src="${image}" class="d-block" alt="Piedras" style="width: 100%; height: 100%;">
                 </div>
                 `;
                 carouselInner.innerHTML += carouselItem; // Agregar la imagen al carousel
@@ -40,6 +36,38 @@ document.addEventListener("DOMContentLoaded", function() {
         
                 // Restablecer la tarjeta cuando la modal se cierra
                 const modalElement = document.getElementById('infoModal');
+                modalElement.addEventListener('hidden.bs.modal', () => {
+                card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
+                });
+            }, 100); // Trabaja con el estilo de la clase modal-flip
+        });
+    });
+
+    // TARJETAS Y MODAL DE HERRAMIENTAS
+    document.querySelectorAll('.flip-card-tools-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            document.getElementById('modalToolImage').src = this.getAttribute('data-image');
+            document.getElementById('modalToolTitle').textContent = this.getAttribute('data-title');
+            document.getElementById('modalToolDetails').textContent = this.getAttribute('data-details');
+            document.getElementById('modalToolAttribute1').textContent = this.getAttribute('attribute1');
+            document.getElementById('modalToolAttribute2').textContent = this.getAttribute('attribute2');
+            document.getElementById('modalToolAttribute3').textContent = this.getAttribute('attribute3');
+            document.getElementById('modalToolAttribute4').textContent = this.getAttribute('attribute4');
+            document.getElementById('modalToolAttribute5').textContent = this.getAttribute('attribute5');
+            document.getElementById('modalToolAttribute6').textContent = this.getAttribute('attribute6');
+            document.getElementById('modalToolAttribute7').textContent = this.getAttribute('attribute7');
+            
+            // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
+            const card = this.closest('.card'); // Obtener la tarjeta actual
+            card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
+        
+            // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
+            setTimeout(() => {
+                const modal = new bootstrap.Modal(document.getElementById('infoToolModal'));
+                modal.show();
+        
+                // Restablecer la tarjeta cuando la modal se cierra
+                const modalElement = document.getElementById('infoToolModal');
                 modalElement.addEventListener('hidden.bs.modal', () => {
                 card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
                 });
