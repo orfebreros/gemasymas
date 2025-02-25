@@ -73,7 +73,7 @@ header {
 }
 
 
-/* TARJETAS Y MODAL */
+/* TARJETAS */
 
 .card-container {
   perspective: 1000px; /* Profundidad para el efecto 3D */
@@ -83,16 +83,17 @@ header {
   transition: opacity 0.6s ease, transform 0.6s ease; /* Suavizar el volteo y opacidad */
   transform-style: preserve-3d; /* Habilitar el efecto 3D */
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .card.hide { /* esta clase se setea en Javascript */
   opacity: 0; /* Desaparecer la tarjeta */
   visibility: hidden; /* Evitar que ocupe espacio */
-}
-
-.modal-flip { /* esta clase se setea en Javascript */
-  animation: flipIn 0.4s ease-in-out; /* Animación al abrir la modal */
-  transform-origin: center; /* Punto de referencia del volteo */
 }
 
 @keyframes flipIn {
@@ -104,6 +105,22 @@ header {
     transform: rotateY(0deg); /* Aparece de frente */
     opacity: 1; /* Completamente visible */
   }
+}
+
+/* MODAL */
+
+.modal-flip { /* esta clase se setea en Javascript */
+  animation: flipIn 0.4s ease-in-out; /* Animación al abrir la modal */
+  transform-origin: center; /* Punto de referencia del volteo */
+}
+
+.modal-header {
+  background-color: #192e5a;
+  color: #ffffff;
+}
+
+.btn-close {
+  filter: invert(1);
 }
 
 
