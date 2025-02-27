@@ -45,51 +45,60 @@
     </header>
 
     <!-- Sidebar -->
-    <div id="sidebar">
-      <h4>Categorías</h4>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle=""
-            data-bs-target="#categorias"
-            aria-expanded="false"
-            aria-controls="categorias"
-          >
-            Piedras
-          </a>
-
+    <!-- Sidebar -->
+<div id="sidebar">
+  <h4>Categorías</h4>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <label class="nav-link">
+        <input type="checkbox" class="filter-checkbox" value="piedras">
+        Piedras
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="nav-link dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#categorias" aria-expanded="false">
+        Herramientas
+      </label>
+      <ul class="collapse" id="categorias">
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="abrasivos">
+            Abrasivos y accesorios de trabajo
+          </label>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#categorias"
-            aria-expanded="false"
-            aria-controls="categorias"
-          >
-            Herramientas
-          </a>
-          <ul class="collapse" id="categorias">
-            <li><a class="nav-link ms-3" href="#">Abracivos y accesorios de trabajo</a></li>
-            <li><a class="nav-link ms-3" href="#">Ácidos</a></li>
-            <li><a class="nav-link ms-3" href="#">Alicates y cortadores</a></li>
-            <li><a class="nav-link ms-3" href="#">Ejes y respuestos</a></li>
-          </ul>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="acidos">
+            Ácidos
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="alicates">
+            Alicates y cortadores
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="ejes">
+            Ejes y repuestos
+          </label>
         </li>
       </ul>
-    </div>
+    </li>
+  </ul>
+</div>
+
     
 
     <div id="content">
+
+      <!-- TARJETAS -->
       <div class="container productos-container">
-        <!-- TARJETAS -->
         <div class="container">
           <div class="row mt-5">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="piedras">
                 <div class="card">
                   <img src="images/piedras/marquesa/marquesa_amatista.png" class="card-img-top" alt="Marquesa" loading="lazy">
                   <div class="card-body text-center">
@@ -109,7 +118,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="piedras">
                 <div class="card">
                   <img src="images/piedras/octagonal/octagonal_anaranjado.png" class="card-img-top" alt="Octagonal" loading="lazy">
                   <div class="card-body text-center">
@@ -273,7 +282,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/cepillo_mini_recto_de_laton.png" class="card-img-top" alt="Cepillo de latón" loading="lazy">
                   <div class="card-body text-center">
@@ -725,71 +734,374 @@
                 </div>
               </div>
             </div>
-        </div>    
-
-        <!-- MODAL DE TARJETAS PARA PIEDRAS -->
-        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-flip">
-              <div class="modal-header">
-                <h5 class="modal-title" id="infoModalLabel">Detalles</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6 text-center">
-                    <!-- Carousel de imágenes -->
-                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner" id="carouselImages"></div>
-
-                      <!-- Controles de navegación -->
-                      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
-                        <span class="visually-hidden">Next</span>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/camilla_para_anillos.png" class="card-img-top" alt="Camilla para anillos" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Camilla para anillos</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/equipos/camilla_para_anillos.png"
+                              data-title="Camilla para anillos"
+                              data-details="La camilla para anillos es una herramienta profesional diseñada para ajustar, agrandar o reducir el tamaño de anillos de manera precisa y eficiente. Es ideal para joyeros, artesanos o cualquier persona que trabaje con la reparación y modificación de joyería."
+                              attribute1="Material: Acero inoxidable"
+                              attribute2="Diseño: Base sólida para brindar estabilidad."
+                              attribute3="Varilla cónica graduada que permite medir y estirar anillos."
+                              attribute4="Palanca robusta para aplicar fuerza de forma controlada.">
+                        Info.
                       </button>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <h5 id="modalProductTitle"></h5>
-                    <p id="modalProductDetails"></p>
-                    <p id="modalProductMeasurements"></p>
-                    <p id="modalProductColors"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/laminador_no_1.png" class="card-img-top" alt="Laminador" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Laminador</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-btn"
+                              data-image="images/herramientas/equipos/laminador_no_1.png,images/herramientas/equipos/laminador_no_3.png,images/herramientas/equipos/laminador_no_3.png"
+                              data-title="Laminador"
+                              data-details="
+                                  Función principal: El laminador para joyería se utiliza para reducir el grosor de metales preciosos como el oro, plata, cobre y otros materiales utilizados en joyería. A través del paso del metal entre dos rodillos, el laminador alisa y extiende el material, creando láminas, placas o hilos con un grosor constante y adecuado para su uso posterior.
+                                  Componentes: El laminador consta de dos rodillos (a veces más) que se colocan a diferentes distancias para comprimir el material de acuerdo con el grosor deseado. La máquina suele incluir un sistema de ajuste para controlar el espacio entre los rodillos, permitiendo cambiar el grosor del material según se necesite.
+                                  Mecanismo manual: Laminador manual lo que implica que el operador gire una manivela para pasar el metal por los rodillos.
+                                  Precisión en el trabajo: El laminador permite un control muy preciso del grosor y la forma del material, lo que es fundamental para crear piezas de joyería con un acabado uniforme y de alta calidad.
+                              ">
+                          Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/lavadora_gemoro.png" class="card-img-top" alt="Lavadora Gemoro" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Lavadora Gemoro</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/equipos/lavadora_gemoro.png"
+                              data-title="Lavadora Gemoro"
+                              data-details="Este limpiador ultrasónico GemOro Next Generation limpia eficazmente las joyas y es ideal para entornos de producción y venta minorista. La unidad de 1,5 pintas ofrece capacidad de calor y el modo de limpieza Power Sweep."
+                              attribute1="Dimensiones: 6-1/2' de largo x 3. 3/4' de ancho x 8' de alto"
+                              attribute2="Voltaje: 110 voltios"
+                              attribute3="Frecuencia: 60Hz"
+                              attribute4="Capacidad: 1,5 pintas (0,71 litros)"
+                              attribute5="Dimensiones Interiores: 6' de largo x 3-1/4' de ancho x 2-3/4' de alto"
+                              attribute6="Marca: GemOro"
+                              attribute7="País De Origen: China">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/lavadora_ultrasonica.png" class="card-img-top" alt="Lavadora Ultrasónica" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Lavadora Ultrasónica</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/equipos/lavadora_ultrasonica.png"
+                              data-title="Lavadora Ultrasónica"
+                              data-details="Es un equipo utilizado para limpiar piezas y componentes de diversos materiales mediante la acción de ondas ultrasónicas. Estas ondas, que son de alta frecuencia, generan pequeñas burbujas en un líquido de limpieza (generalmente agua con detergentes especiales), que al colapsar, producen un efecto de 'microexplosión' que elimina suciedad, aceites, polvo, residuos y otros contaminantes de superficies muy pequeñas o de difícil acceso."
+                              attribute1="Limpieza de alta precisión"
+                              attribute2="Ahorro de tiempo y esfuerzo"
+                              attribute3="Sin daño a las piezas">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/motor_para_pulir_no_1.png" class="card-img-top" alt="Motor Para Pulir" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Motor Para Pulir</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-btn"
+                              data-image="images/herramientas/equipos/motor_para_pulir_no_1.png,images/herramientas/equipos/motor_para_pulir_no_2.png,images/herramientas/equipos/motor_para_pulir_no_3.png"
+                              data-title="Motor Para Pulir"
+                              data-details="El motor para pulir se utiliza en talleres de joyería para accionar herramientas de pulido, como ruedas de fieltro, discos abrasivos, o cepillos, que son fundamentales para obtener un acabado suave y brillante en las piezas de joyería."
+                              data-measurements="Tipo de motor: El motor eléctrico"
+                              data-colors="Accesorios compatibles: El motor para pulir se puede utilizar con diversos accesorios">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/equipos/tombola_magnetica.png" class="card-img-top" alt="Tómbola magnética" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Tómbola magnética</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/equipos/tombola_magnetica.png"
+                              data-title="Tómbola magnética"
+                              data-details="Es un dispositivo diseñado para facilitar el proceso de pulido, limpieza o acabado de piezas pequeñas de joyería."
+                              attribute1="Mejores acabados"
+                              attribute2="Preserva el grosor del material"
+                              attribute3="Limpieza profunda"
+                              attribute4="Reduce la perdida de joyas dañadas"
+                              attribute5="Maximiza tiempos de producción">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/fresa_trompo.png" class="card-img-top" alt="Fresa Trompo" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Fresa Trompo</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/fresa_trompo.png"
+                              data-title="Fresa Trompo"
+                              data-details="Las fresas cortan sin vibraciones y no se enganchan ni ruedan alrededor de la mesa."
+                              attribute1="Medidas en milímetros: 1.2 / 1.3 / 1.4 / 1.6 / 1.8 / 2"
+                              attribute2="País de Origen: Alemania">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/porta_esmeril.png" class="card-img-top" alt="Porta Esmeril" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Porta Esmeril</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/porta_esmeril.png"
+                              data-title="Porta Esmeril"
+                              data-details="Mandril utilizado para fijar gomas circulares, discos separadores, de sierra o cualquier otro disco con orificio de 1,5 mm."
+                              attribute1="Largo: 4.5 cm"
+                              attribute2="Diámetro: 4 mm">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/punta_de_diamante_no_120.png" class="card-img-top" alt="Punta de Diamante #120" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Punta de Diamante #120</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/punta_de_diamante_no_120.png"
+                              data-title="Punta de Diamante #120"
+                              data-details="Este volante, fabricado con una viruta de diamante de calidad industrial colada en una cabeza de 3/8' de alto, es adecuado para crear cortes brillantes en piezas de joyería."
+                              attribute1="Material: Diamante"
+                              attribute2="País de Origen: Canadá">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/punta_de_diamante_dremel.png" class="card-img-top" alt="Punta de Diamante Dremel" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Punta de Diamante Dremel</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/punta_de_diamante_dremel.png"
+                              data-title="Punta de Diamante Dremel"
+                              data-details="Se utiliza para trabajos de tallado y grabado en materiales duros como vidrio, cerámica, piedra, metales y otros materiales similares."
+                              attribute1="Es ideal para detalles precisos y trabajos decorativos. Funciona con herramientas rotativas Dremel y tiene un vástago de 1/8 de pulgada, lo que lo hace compatible con la mayoría de los modelos de esta marca."
+                              attribute2="Altura: 4.5 cm"
+                              attribute3="País de Origen: Israel">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/fresas_redondas.png" class="card-img-top" alt="Fresas Redondas" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Fresas Redondas</h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/fresas_redondas.png"
+                              data-title="Fresas Redondas"
+                              data-details="Las fresas cortan sin vibraciones y no se enganchan ni ruedan alrededor de la pieza de trabajo. El estriado de la cabeza es preciso y uniforme, y una aleación especial de tungsteno y un templado cuidadoso hacen que estas fresas conserven su filo."
+                              attribute1="Medidas en milímetros: 1.2 / 1.3 / 1.4 / 1.6 / 1.8 / 2"
+                              attribute2="País de Origen: Alemania">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/porta_esmeril.png" class="card-img-top" alt="Porta Esmeril" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/porta_esmeril.png"
+                              data-title="Porta Esmeril"
+                              data-details="Mandril utilizado para fijar gomas circulares, discos separadores, de sierra o cualquier otro disco con orificio de 1,5 mm."
+                              attribute1="Largo: 4.5 cm"
+                              attribute2="Diámetro: 4 mm">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/punta_de_diamante_no_120.png" class="card-img-top" alt="Punta de Diamante #120" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/punta_de_diamante_no_120.png"
+                              data-title="Punta de Diamante #120"
+                              data-details="Este volante, fabricado con una viruta de diamante de calidad industrial colada en una cabeza de 3/8' de alto, es adecuado para crear cortes brillantes en piezas de joyería."
+                              attribute1="Material: Diamante"
+                              attribute2="País de Origen: Canadá">
+                        Info.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <div class="card-container">
+                <div class="card">
+                  <img src="images/herramientas/fresas/punta_de_diamante_dremel.png" class="card-img-top" alt="Punta de Diamante Dremel" loading="lazy">
+                  <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                    <div style="text-align: right;">
+                      <button class="btn btn-success flip-card-tools-btn"
+                              data-image="images/herramientas/fresas/punta_de_diamante_dremel.png"
+                              data-title="Punta de Diamante Dremel"
+                              data-details="Se utiliza para trabajos de tallado y grabado en materiales duros como vidrio, cerámica, piedra, metales y otros materiales similares."
+                              attribute1="Es ideal para detalles precisos y trabajos decorativos. Funciona con herramientas rotativas Dremel y tiene un vástago de 1/8 de pulgada, lo que lo hace compatible con la mayoría de los modelos de esta marca."
+                              attribute2="Altura: 4.5 cm"
+                              attribute3="País de Origen: Israel">
+                        Info.
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- MODAL DE TARJETAS PARA HERRAMIENTAS -->
-        <div class="modal fade" id="infoToolModal" tabindex="-1" aria-labelledby="infoModalToolLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-flip">
-              <div class="modal-header">
-                <h5 class="modal-title" id="infoToolModalLabel">Detalles</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- MODAL DE TARJETAS PARA PIEDRAS -->
+      <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content modal-flip">
+            <div class="modal-header">
+              <h5 class="modal-title" id="infoModalLabel">Detalles</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                  <!-- Carousel de imágenes -->
+                  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselImages"></div>
+
+                    <!-- Controles de navegación -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h5 id="modalProductTitle"></h5>
+                  <p id="modalProductDetails"></p>
+                  <p id="modalProductMeasurements"></p>
+                  <p id="modalProductColors"></p>
+                </div>
               </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6 text-center">
-                    <img id="modalToolImage" alt="Herramientas" class="d-block" style="width: 100%; height: 100%;">
-                  </div>
-                  <div class="col-md-6">
-                    <h5 id="modalToolTitle"></h5>
-                    <p id="modalToolDetails"></p>
-                    <p id="modalToolAttribute1"></p>
-                    <p id="modalToolAttribute2"></p>
-                    <p id="modalToolAttribute3"></p>
-                    <p id="modalToolAttribute3"></p>
-                    <p id="modalToolAttribute4"></p>
-                    <p id="modalToolAttribute5"></p>
-                    <p id="modalToolAttribute6"></p>
-                    <p id="modalToolAttribute7"></p>
-                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL DE TARJETAS PARA HERRAMIENTAS -->
+      <div class="modal fade" id="infoToolModal" tabindex="-1" aria-labelledby="infoModalToolLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content modal-flip">
+            <div class="modal-header">
+              <h5 class="modal-title" id="infoToolModalLabel">Detalles</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 text-center">
+                  <img id="modalToolImage" alt="Herramientas" class="d-block" style="width: 100%; height: 100%;">
+                </div>
+                <div class="col-md-6">
+                  <h5 id="modalToolTitle"></h5>
+                  <p id="modalToolDetails"></p>
+                  <p id="modalToolAttribute1"></p>
+                  <p id="modalToolAttribute2"></p>
+                  <p id="modalToolAttribute3"></p>
+                  <p id="modalToolAttribute3"></p>
+                  <p id="modalToolAttribute4"></p>
+                  <p id="modalToolAttribute5"></p>
+                  <p id="modalToolAttribute6"></p>
+                  <p id="modalToolAttribute7"></p>
                 </div>
               </div>
             </div>

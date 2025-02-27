@@ -1,5 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    const checkboxes = document.querySelectorAll(".filter-checkbox");
+    const cards = document.querySelectorAll(".card-container");
+  
+    function filterCards() {
+      const selectedCategories = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+  
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        if (selectedCategories.length === 0 || selectedCategories.includes(cardCategory)) {
+          card.style.display = "block"; // Mostrar si coincide con una categoría seleccionada o si ninguna está seleccionada
+        } else {
+          card.style.display = "none"; // Ocultar si no está en la lista de seleccionados
+        }
+      });
+    }
+  
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", filterCards);
+    });
+  
+    filterCards(); // Mostrar todas las tarjetas al inicio
+      
     // TARJETAS Y MODAL DE PIEDRAS
     document.querySelectorAll('.flip-card-btn').forEach(button => {
         button.addEventListener('click', function () {
