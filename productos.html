@@ -45,42 +45,50 @@
     </header>
 
     <!-- Sidebar -->
-    <div id="sidebar">
-      <h4>Categorías</h4>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle=""
-            data-bs-target="#categorias"
-            aria-expanded="false"
-            aria-controls="categorias"
-          >
-            Piedras
-          </a>
-
+    <!-- Sidebar -->
+<div id="sidebar">
+  <h4>Categorías</h4>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <label class="nav-link">
+        <input type="checkbox" class="filter-checkbox" value="piedras">
+        Piedras
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="nav-link dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#categorias" aria-expanded="false">
+        Herramientas
+      </label>
+      <ul class="collapse" id="categorias">
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="abrasivos">
+            Abrasivos y accesorios de trabajo
+          </label>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#categorias"
-            aria-expanded="false"
-            aria-controls="categorias"
-          >
-            Herramientas
-          </a>
-          <ul class="collapse" id="categorias">
-            <li><a class="nav-link ms-3" href="#">Abracivos y accesorios de trabajo</a></li>
-            <li><a class="nav-link ms-3" href="#">Ácidos</a></li>
-            <li><a class="nav-link ms-3" href="#">Alicates y cortadores</a></li>
-            <li><a class="nav-link ms-3" href="#">Ejes y respuestos</a></li>
-          </ul>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="acidos">
+            Ácidos
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="alicates">
+            Alicates y cortadores
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" class="filter-checkbox" value="ejes">
+            Ejes y repuestos
+          </label>
         </li>
       </ul>
-    </div>
+    </li>
+  </ul>
+</div>
+
     
 
     <div id="content">
@@ -90,7 +98,7 @@
         <div class="container">
           <div class="row mt-5">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="piedras">
                 <div class="card">
                   <img src="images/piedras/marquesa/marquesa_amatista.png" class="card-img-top" alt="Marquesa" loading="lazy">
                   <div class="card-body text-center">
@@ -110,7 +118,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="piedras">
                 <div class="card">
                   <img src="images/piedras/octagonal/octagonal_anaranjado.png" class="card-img-top" alt="Octagonal" loading="lazy">
                   <div class="card-body text-center">
@@ -274,7 +282,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-category="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/cepillo_mini_recto_de_laton.png" class="card-img-top" alt="Cepillo de latón" loading="lazy">
                   <div class="card-body text-center">
