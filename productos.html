@@ -51,7 +51,7 @@
   <ul class="nav flex-column">
     <li class="nav-item">
       <label class="nav-link">
-        <input type="checkbox" class="filter-checkbox" value="piedras">
+        <input type="checkbox" data-categoria="piedras">
         Piedras
       </label>
     </li>
@@ -62,25 +62,25 @@
       <ul class="collapse" id="categorias">
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="abrasivos">
+            <input type="checkbox" data-categoria="abrasivos">
             Abrasivos y accesorios de trabajo
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="acidos">
+            <input type="checkbox" data-categoria="acidos">
             Ácidos
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="alicates">
+            <input type="checkbox" data-categoria="alicates">
             Alicates y cortadores
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="ejes">
+            <input type="checkbox" data-categoria="ejes">
             Ejes y repuestos
           </label>
         </li>
@@ -98,7 +98,7 @@
         <div class="container">
           <div class="row mt-5">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="piedras">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/marquesa/marquesa_amatista.png" class="card-img-top" alt="Marquesa" loading="lazy">
                   <div class="card-body text-center">
@@ -118,7 +118,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="piedras">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/octagonal/octagonal_anaranjado.png" class="card-img-top" alt="Octagonal" loading="lazy">
                   <div class="card-body text-center">
@@ -282,7 +282,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="abrasivos">
+              <div class="card-container" data-categoria="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/cepillo_mini_recto_de_laton.png" class="card-img-top" alt="Cepillo de latón" loading="lazy">
                   <div class="card-body text-center">
