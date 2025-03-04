@@ -51,7 +51,7 @@
   <ul class="nav flex-column">
     <li class="nav-item">
       <label class="nav-link">
-        <input type="checkbox" class="filter-checkbox" value="piedras">
+        <input type="checkbox" data-categoria="piedras">
         Piedras
       </label>
     </li>
@@ -62,26 +62,50 @@
       <ul class="collapse" id="categorias">
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="abrasivos">
+            <input type="checkbox" data-categoria="abrasivos">
             Abrasivos y accesorios de trabajo
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="acidos">
+            <input type="checkbox" data-categoria="acidos">
             Ácidos
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="alicates">
+            <input type="checkbox" data-categoria="alicates">
             Alicates y cortadores
           </label>
         </li>
         <li>
           <label class="nav-link ms-3">
-            <input type="checkbox" class="filter-checkbox" value="ejes">
-            Ejes y repuestos
+            <input type="checkbox" data-categoria="coral_y_pegamento">
+            Coral y pegamento
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" data-categoria="ejes_foredom">
+            Ejes y repuestos Foredom
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" data-categoria="equipos">
+            Equipos
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" data-categoria="fresas">
+            Fresas
+          </label>
+        </li>
+        <li>
+          <label class="nav-link ms-3">
+            <input type="checkbox" data-categoria="fundicion_soldadura">
+            Fundición y soldadura
           </label>
         </li>
       </ul>
@@ -98,7 +122,7 @@
         <div class="container">
           <div class="row mt-5">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="piedras">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/marquesa/marquesa_amatista.png" class="card-img-top" alt="Marquesa" loading="lazy">
                   <div class="card-body text-center">
@@ -118,7 +142,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="piedras">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/octagonal/octagonal_anaranjado.png" class="card-img-top" alt="Octagonal" loading="lazy">
                   <div class="card-body text-center">
@@ -138,7 +162,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/redonda/redonda_esmeralda.png" class="card-img-top" alt="Redonda" loading="lazy">
                   <div class="card-body text-center">
@@ -158,7 +182,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/lagrima/lagrima_circon_azul.png" class="card-img-top" alt="Lágrima" loading="lazy">
                   <div class="card-body text-center">
@@ -180,7 +204,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/ovalo/ovalo_topacio.png" class="card-img-top" alt="Óvalo" loading="lazy">
                   <div class="card-body text-center">
@@ -200,7 +224,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/flor/flor_rosa_francia.png" class="card-img-top" alt="Flor" loading="lazy">
                   <div class="card-body text-center">
@@ -220,7 +244,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/corazon/corazon_rubi.png" class="card-img-top" alt="Corazón" loading="lazy">
                   <div class="card-body text-center">
@@ -240,7 +264,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/ice/ice.png" class="card-img-top" alt="Ice" loading="lazy">
                   <div class="card-body text-center">
@@ -262,7 +286,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="piedras">
                 <div class="card">
                   <img src="images/piedras/cuadrado/cuadrado_onix.png" class="card-img-top" alt="Cuadrado" loading="lazy">
                   <div class="card-body text-center">
@@ -282,7 +306,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container" data-category="abrasivos">
+              <div class="card-container" data-categoria="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/cepillo_mini_recto_de_laton.png" class="card-img-top" alt="Cepillo de latón" loading="lazy">
                   <div class="card-body text-center">
@@ -303,7 +327,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/disco_diamantado.png" class="card-img-top" alt="Disco diamantado" loading="lazy">
                   <div class="card-body text-center">
@@ -324,7 +348,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/lija_320_y_400.png" class="card-img-top" alt="Lija" loading="lazy">
                   <div class="card-body text-center">
@@ -347,7 +371,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="abrasivos">
                 <div class="card">
                   <img src="images/herramientas/abrasivos_y_accesorios/sacabocado.png" class="card-img-top" alt="Sacabocado" loading="lazy">
                   <div class="card-body text-center">
@@ -369,7 +393,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="acidos">
                 <div class="card">
                   <img src="images/herramientas/acidos/acido_para_probar_oro.png" class="card-img-top" alt="Ácido" loading="lazy">
                   <div class="card-body text-center">
@@ -390,7 +414,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/alicate_corte_lateral.png" class="card-img-top" alt="Alicate corte lateral" loading="lazy">
                   <div class="card-body text-center">
@@ -410,7 +434,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/alicate_punta_redonda.png" class="card-img-top" alt="Alicate punta redonda" loading="lazy">
                   <div class="card-body text-center">
@@ -432,7 +456,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/cortador_al_ras_de_precision.png" class="card-img-top" alt="Cortador al Ras de Precisión" loading="lazy">
                   <div class="card-body text-center">
@@ -453,7 +477,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/cortador_biselado_delgado.png" class="card-img-top" alt="Cortador Biselado delgado" loading="lazy">
                   <div class="card-body text-center">
@@ -474,7 +498,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/pinza_corte_diagonal.png" class="card-img-top" alt="Pinza Corte Diagonal" loading="lazy">
                   <div class="card-body text-center">
@@ -495,7 +519,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/pinza_miniatura_de_punta_y_corte.png" class="card-img-top" alt="Pinza Miniatura de Punta y Corte" loading="lazy">
                   <div class="card-body text-center">
@@ -519,7 +543,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/pinza_miniatura_tipo_tenaza.png" class="card-img-top" alt="Pinza miniatura tipo tenaza" loading="lazy">
                   <div class="card-body text-center">
@@ -541,7 +565,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/pinza_punta_redonda.png" class="card-img-top" alt="Pinza Punta Redonda" loading="lazy">
                   <div class="card-body text-center">
@@ -561,7 +585,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/tenacilla_punta_fina.png" class="card-img-top" alt="Tenacilla Punta Fina" loading="lazy">
                   <div class="card-body text-center">
@@ -582,7 +606,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="alicates">
                 <div class="card">
                   <img src="images/herramientas/alicates_y_cortadores/tijeras_para_joyero.png" class="card-img-top" alt="Tijeras para Joyero" loading="lazy">
                   <div class="card-body text-center">
@@ -607,7 +631,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="coral_y_pegamento">
                 <div class="card">
                   <img src="images/herramientas/coral_y_pegamento/coral.png" class="card-img-top" alt="Coral" loading="lazy">
                   <div class="card-body text-center">
@@ -629,7 +653,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="coral_y_pegamento">
                 <div class="card">
                   <img src="images/herramientas/coral_y_pegamento/poxipol.png" class="card-img-top" alt="PoXipol" loading="lazy">
                   <div class="card-body text-center">
@@ -650,7 +674,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="ejes_foredom">
                 <div class="card">
                   <img src="images/herramientas/ejes_y_respuestos_foredom/llave_de_mandril_con_mango_comodo.png" class="card-img-top" alt="Llave de Mandril con Mango Cómodo" loading="lazy">
                   <div class="card-body text-center">
@@ -669,7 +693,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="ejes_foredom">
                 <div class="card">
                   <img src="images/herramientas/ejes_y_respuestos_foredom/mandril_porta_broca_foredom.png" class="card-img-top" alt="Mandril Porta Broca Foderom" loading="lazy">
                   <div class="card-body text-center">
@@ -690,7 +714,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="ejes_foredom">
                 <div class="card">
                   <img src="images/herramientas/ejes_y_respuestos_foredom/motor_foredom.png" class="card-img-top" alt="Motor Foredom" loading="lazy">
                   <div class="card-body text-center">
@@ -711,7 +735,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="ejes_foredom">
                 <div class="card">
                   <img src="images/herramientas/ejes_y_respuestos_foredom/pedal_de_foredom.png" class="card-img-top" alt="Pedal Foderom" loading="lazy">
                   <div class="card-body text-center">
@@ -735,7 +759,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/camilla_para_anillos.png" class="card-img-top" alt="Camilla para anillos" loading="lazy">
                   <div class="card-body text-center">
@@ -757,7 +781,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/laminador_no_1.png" class="card-img-top" alt="Laminador" loading="lazy">
                   <div class="card-body text-center">
@@ -782,7 +806,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/lavadora_gemoro.png" class="card-img-top" alt="Lavadora Gemoro" loading="lazy">
                   <div class="card-body text-center">
@@ -807,7 +831,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/lavadora_ultrasonica.png" class="card-img-top" alt="Lavadora Ultrasónica" loading="lazy">
                   <div class="card-body text-center">
@@ -828,7 +852,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/motor_para_pulir_no_1.png" class="card-img-top" alt="Motor Para Pulir" loading="lazy">
                   <div class="card-body text-center">
@@ -848,7 +872,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="equipos">
                 <div class="card">
                   <img src="images/herramientas/equipos/tombola_magnetica.png" class="card-img-top" alt="Tómbola magnética" loading="lazy">
                   <div class="card-body text-center">
@@ -873,7 +897,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fresas">
                 <div class="card">
                   <img src="images/herramientas/fresas/fresa_trompo.png" class="card-img-top" alt="Fresa Trompo" loading="lazy">
                   <div class="card-body text-center">
@@ -893,7 +917,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fresas">
                 <div class="card">
                   <img src="images/herramientas/fresas/porta_esmeril.png" class="card-img-top" alt="Porta Esmeril" loading="lazy">
                   <div class="card-body text-center">
@@ -913,7 +937,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fresas">
                 <div class="card">
                   <img src="images/herramientas/fresas/punta_de_diamante_no_120.png" class="card-img-top" alt="Punta de Diamante #120" loading="lazy">
                   <div class="card-body text-center">
@@ -933,7 +957,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fresas">
                 <div class="card">
                   <img src="images/herramientas/fresas/punta_de_diamante_dremel.png" class="card-img-top" alt="Punta de Diamante Dremel" loading="lazy">
                   <div class="card-body text-center">
@@ -956,7 +980,7 @@
           </div>
           <div class="row">
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fresas">
                 <div class="card">
                   <img src="images/herramientas/fresas/fresas_redondas.png" class="card-img-top" alt="Fresas Redondas" loading="lazy">
                   <div class="card-body text-center">
@@ -976,18 +1000,18 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fundicion_soldadura">
                 <div class="card">
-                  <img src="images/herramientas/fresas/porta_esmeril.png" class="card-img-top" alt="Porta Esmeril" loading="lazy">
+                  <img src="images/herramientas/fundicion_y_soldadura/acido_borico.png" class="card-img-top" alt="Ácido Bórico" loading="lazy">
                   <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Ácido Bórico</h5>
                     <div style="text-align: right;">
                       <button class="btn btn-success flip-card-tools-btn"
-                              data-image="images/herramientas/fresas/porta_esmeril.png"
-                              data-title="Porta Esmeril"
-                              data-details="Mandril utilizado para fijar gomas circulares, discos separadores, de sierra o cualquier otro disco con orificio de 1,5 mm."
-                              attribute1="Largo: 4.5 cm"
-                              attribute2="Diámetro: 4 mm">
+                              data-image="images/herramientas/fundicion_y_soldadura/acido_borico.png"
+                              data-title="Ácido Bórico"
+                              data-details="El ácido bórico es un producto químico que se utiliza en la joyería para varios propósitos, entre ellos, desoxidante y fundente que se usa para soldar metales, preparar y limpiar la superficie antes de soldar."
+                              attribute1="Tamaño: Por libra"
+                              attribute2="País de Origen: Estados Unidos">
                         Info.
                       </button>
                     </div>
@@ -996,18 +1020,20 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fundicion_soldadura">
                 <div class="card">
-                  <img src="images/herramientas/fresas/punta_de_diamante_no_120.png" class="card-img-top" alt="Punta de Diamante #120" loading="lazy">
+                  <img src="images/herramientas/fundicion_y_soldadura/adaptador_con_valvula_de_seguridad.png" class="card-img-top" alt="Adaptador con válvula de seguridad" loading="lazy">
                   <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Adaptador con válvula de seguridad</h5>
                     <div style="text-align: right;">
                       <button class="btn btn-success flip-card-tools-btn"
-                              data-image="images/herramientas/fresas/punta_de_diamante_no_120.png"
-                              data-title="Punta de Diamante #120"
-                              data-details="Este volante, fabricado con una viruta de diamante de calidad industrial colada en una cabeza de 3/8' de alto, es adecuado para crear cortes brillantes en piezas de joyería."
-                              attribute1="Material: Diamante"
-                              attribute2="País de Origen: Canadá">
+                              data-image="images/herramientas/fundicion_y_soldadura/adaptador_con_valvula_de_seguridad.png"
+                              data-title="Adaptador con válvula de seguridad"
+                              data-details="El modelo es el 305401, diseñado para manejar presiones de 10-14 kg/h, con conexión POL / BSP 3/8'' LH (hilo izquierdo). Se utiliza principalmente como medida de seguridad en sistemas que manejan gas o combustible, evitando fallos en la manguera o sobrepresión."
+                              attribute1="Accesorio"
+                              attribute2="Válvula de caída de manguera"
+                              attribute3="Válvula de ventilación del argot"
+                              attribute4="Ruta de válvula">
                         Info.
                       </button>
                     </div>
@@ -1016,19 +1042,18 @@
               </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
-              <div class="card-container">
+              <div class="card-container" data-categoria="fundicion_soldadura">
                 <div class="card">
-                  <img src="images/herramientas/fresas/punta_de_diamante_dremel.png" class="card-img-top" alt="Punta de Diamante Dremel" loading="lazy">
+                  <img src="images/herramientas/fundicion_y_soldadura/adaptador_para_dos_mangueras.png" class="card-img-top" alt="Adaptador Para Dos Mangueras" loading="lazy">
                   <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Adaptador Para Dos Mangueras</h5>
                     <div style="text-align: right;">
                       <button class="btn btn-success flip-card-tools-btn"
-                              data-image="images/herramientas/fresas/punta_de_diamante_dremel.png"
-                              data-title="Punta de Diamante Dremel"
-                              data-details="Se utiliza para trabajos de tallado y grabado en materiales duros como vidrio, cerámica, piedra, metales y otros materiales similares."
-                              attribute1="Es ideal para detalles precisos y trabajos decorativos. Funciona con herramientas rotativas Dremel y tiene un vástago de 1/8 de pulgada, lo que lo hace compatible con la mayoría de los modelos de esta marca."
-                              attribute2="Altura: 4.5 cm"
-                              attribute3="País de Origen: Israel">
+                              data-image="images/herramientas/fundicion_y_soldadura/adaptador_para_dos_mangueras.png"
+                              data-title="Adaptador Para Dos Mangueras"
+                              data-details="Es un dispositivo utilizado en procesos de fusión de metales o en equipos de soldadura. Su función principal es permitir la conexión de dos mangueras a un solo equipo o fuente de gas, facilitando la distribución de gases como oxígeno o acetileno a dos áreas diferentes de trabajo al mismo tiempo. "
+                              attribute1="Conexiones: El adaptador tiene conexiones roscadas en ambos extremos, generalmente compatibles con mangueras estándar de soldadura o equipos de fusión, como las mangueras de oxígeno y acetileno."
+                              attribute2="Versatilidad: Permite conectar dos mangueras a un solo equipo de gas, lo que optimiza el uso de las fuentes de energía, haciendo el proceso de trabajo más eficiente en aplicaciones de fusión y soldadura.">
                         Info.
                       </button>
                     </div>

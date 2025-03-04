@@ -59,15 +59,25 @@ header {
   flex-grow: 1;
 }
 
-.productos-container{
-  margin-top: 92px;
-}
-
   
 /* TARJETAS */
 
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta dinámicamente */
+  gap: 20px;
+  margin-top: 92px;
+}
+
 .card-container {
+  background: white;
+  padding: 15px;
+  text-align: center;
   perspective: 1000px; /* Profundidad para el efecto 3D */
+}
+
+.hidden {
+  display: none !important;
 }
 
 .card {
