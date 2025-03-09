@@ -44,76 +44,34 @@
       </div>
     </header>
 
+    <button id="filtros-btn" class="btn btn-primary d-md-none" onclick="toggleSidebar()">
+      <i class="bi bi-funnel"></i> Filtros
+    </button>
+
     <!-- Sidebar -->
-    <!-- Sidebar -->
-<div id="sidebar">
-  <h4>Categorías</h4>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <label class="nav-link">
-        <input type="checkbox" data-categoria="piedras">
-        Piedras
-      </label>
-    </li>
-    <li class="nav-item">
-      <label class="nav-link dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#categorias" aria-expanded="false">
-        Herramientas
-      </label>
-      <ul class="collapse" id="categorias">
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="abrasivos">
-            Abrasivos y accesorios de trabajo
+    <div id="sidebar">
+      <h4>Categorías</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <label class="nav-link">
+            <input type="checkbox" data-categoria="piedras"> Piedras
           </label>
         </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="acidos">
-            Ácidos
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="alicates">
-            Alicates y cortadores
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="coral_y_pegamento">
-            Coral y pegamento
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="ejes_foredom">
-            Ejes y repuestos Foredom
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="equipos">
-            Equipos
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="fresas">
-            Fresas
-          </label>
-        </li>
-        <li>
-          <label class="nav-link ms-3">
-            <input type="checkbox" data-categoria="fundicion_soldadura">
-            Fundición y soldadura
-          </label>
+        <li class="nav-item">
+          <label class="nav-link">Herramientas</label>
+          <ul class="collapse show" id="categorias">
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="abrasivos"> Abrasivos y accesorios de trabajo</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="acidos"> Ácidos</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="alicates"> Alicates y cortadores</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="coral_y_pegamento"> Coral y pegamento</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="ejes_foredom"> Ejes y repuestos Foredom</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="equipos"> Equipos</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="fresas"> Fresas</label></li>
+            <li><label class="nav-link ms-3"><input type="checkbox" data-categoria="fundicion_soldadura"> Fundición y soldadura</label></li>
+          </ul>
         </li>
       </ul>
-    </li>
-  </ul>
-</div>
-
-    
+    </div>
 
     <div id="content">
 

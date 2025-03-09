@@ -49,15 +49,56 @@ header {
   width: 250px;
   height: 100%;
   position: fixed;
-  background-color: #f8f9fa;
   padding: 15px;
   border-right: 1px solid #ddd;
+  color: #343a40; /* Texto blanco para contraste */
 }
+
+#sidebar h4 {
+  color: white;
+}
+
+#sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre checkbox y texto */
+  color: #343a40;
+  padding: 5px 10px;
+  white-space: nowrap; /* Mantiene todo en una línea */
+}
+
+#sidebar .nav-link input[type="checkbox"] {
+  margin: 0;
+  appearance: none; /* Elimina el estilo predeterminado */
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+#sidebar .nav-link input[type="checkbox"]:checked::before {
+  content: "✔";
+  font-size: 12px;
+  color: 026322;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sidebar ul {
+  list-style: none; /* Quita los puntos */
+  padding: 0;
+}
+
 #content {
   margin-left: 250px;
   padding: 20px;
   flex-grow: 1;
 }
+
 
   
 /* TARJETAS */
