@@ -46,12 +46,14 @@ header {
 
 #sidebar {
   margin-top: 92px;
-  width: 250px;
+  min-width: 250px; /* Mantiene un ancho mínimo */
+  max-width: fit-content; /* Se ajusta automáticamente al contenido más largo */
   height: 100%;
   position: fixed;
   padding: 15px;
   border-right: 1px solid #ddd;
-  color: #343a40; /* Texto blanco para contraste */
+  color: #343a40;
+  background-color: #f8f9fa; /* Asegura contraste */
 }
 
 #sidebar h4 {
@@ -81,7 +83,7 @@ header {
 #sidebar .nav-link input[type="checkbox"]:checked::before {
   content: "✔";
   font-size: 12px;
-  color: 026322;
+  color: #026322;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,10 +96,11 @@ header {
 }
 
 #content {
-  margin-left: 250px;
-  padding: 20px;
+  margin-left: 250px; /* Permite que el contenido se ajuste dinámicamente */
+  padding: 100px;
   flex-grow: 1;
 }
+
 
 
   
