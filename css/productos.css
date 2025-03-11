@@ -6,14 +6,6 @@ body {
   display: flex;
   height: 100vh;
 }
-
-.estetica-divs{
-  padding: 2%;
-}
-
-.h2-style{
-  text-align: center;
-}
   
   
 /* HEADER Y NAVBAR */
@@ -42,18 +34,47 @@ header {
 }
 
 
+/* BOTÓN DE FILTROS RESPONSIVE */
+
+#filtros-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+
 /* SIDE BAR */
 
 #sidebar {
   margin-top: 92px;
-  min-width: 250px; /* Mantiene un ancho mínimo */
-  max-width: fit-content; /* Se ajusta automáticamente al contenido más largo */
+  min-width: 250px;
+  max-width: fit-content;
   height: 100%;
   position: fixed;
   padding: 15px;
   border-right: 1px solid #ddd;
   color: #343a40;
-  background-color: #f8f9fa; /* Asegura contraste */
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease-in-out;
+}
+
+#sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#sidebar.show {
+    transform: translateX(0);
 }
 
 #sidebar h4 {
@@ -102,19 +123,16 @@ header {
 }
 
 
-
-  
 /* TARJETAS */
 
 .productos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta dinámicamente */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Se adapta dinámicamente */
   gap: 20px;
   margin-top: 92px;
 }
 
 .card-container {
-  background: white;
   padding: 15px;
   text-align: center;
   perspective: 1000px; /* Profundidad para el efecto 3D */
@@ -201,7 +219,7 @@ header {
 @media (hover: hover) {
   .social-icon:hover {
     transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
-    color: #007bff; /* Cambia de color al hacer hover */
+    color: #026322; /* Cambia de color al hacer hover */
   }
 }
   
@@ -256,4 +274,20 @@ header {
 
 .whatsapp-button:hover {
   transform: scale(1.1);
+}
+
+
+
+
+/* Estilos específicos para móviles (sidebar cubriendo la pantalla) */
+@media (max-width: 768px) {
+  #sidebar {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%); /* Oculto por defecto */
+      border-right: none;
+  }
 }

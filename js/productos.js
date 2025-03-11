@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
+    }
+    
   const checkboxes = document.querySelectorAll('input[type="checkbox"]'); // Selecciona los checkboxes
   const productosContainer = document.querySelector(".productos-container"); // Contenedor de productos
   const tarjetas = Array.from(document.querySelectorAll(".card-container")); // Contenedor de tarjetas
