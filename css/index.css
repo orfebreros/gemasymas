@@ -252,7 +252,7 @@ header {
 @media (hover: hover) {
   .social-icon:hover {
     transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
-    color: #007bff; /* Cambia de color al hacer hover */
+    color: #026322; /* Cambia de color al hacer hover */
   }
 }
 
