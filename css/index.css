@@ -40,23 +40,18 @@ header {
 }
 
 
-/* CAROUSEL */
+/* IMAGEN DE INICIO */
 
-.my-carousel{
+.image-container {
+  width: 100%;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
   margin-top: 92px;
 }
 
-.carousel-inner img {
-  
-  object-fit: cover; /* Asegura que las imágenes se recorten bien */
-}
-
-.carousel-indicators button {
-  background-color: #026322; /* Cambia el color de los puntitos */
-}
-
-.carousel-indicators .active {
-  background-color: #026322; /* Color del puntito activo */
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Elimina el espacio en blanco debajo de la imagen */
 }
 
 
