@@ -82,6 +82,14 @@ header {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+/* .card-body {
+  background: linear-gradient(to bottom, white, #192e5a);
+}
+
+.card-body h5 {
+  color: white; /* Cambia el color del texto */
+/*} */
+
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
@@ -89,6 +97,11 @@ header {
 .card.hide { /* esta clase se setea en Javascript */
   opacity: 0; /* Desaparecer la tarjeta */
   visibility: hidden; /* Evitar que ocupe espacio */
+}
+
+.flip-card-btn{
+  background-color: #192e5a !important;
+  color: white !important;
 }
 
 @keyframes flipIn {
@@ -121,17 +134,24 @@ header {
 
 /* CLIENTES SATISFECHOS */
 
+.clientes-satisfechos{
+  background-color: black;
+}
+
+.clientes-satisfechos h2{
+  color: white;
+  margin: 75px 0;
+}
+
 .testimonial-card {
   text-align: center;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #292929;
   border-radius: 10px;
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: 393939;
   position: relative; /* Necesario para posicionar la imagen */
   margin: 0px 0px; /* Espacio entre las tarjetas verticalmente */
 }
-
 
 .testimonial-card img {
   width: 80px;
@@ -142,21 +162,24 @@ header {
   top: -40px; /* Posiciona la imagen fuera de la tarjeta */
   left: 50%;
   transform: translateX(-50%);
-  border: 3px solid #ffffff; /* Borde blanco para destacar */
+  border: 3px solid #292929; /* Borde blanco para destacar */
 }
 
 .testimonial-card blockquote {
   font-style: italic;
-  color: #555555;
+  color: white;
   margin-top: 50px; /* Añade espacio para la imagen */
 }
+
 .testimonial-card h5 {
   margin-top: 15px;
   font-weight: bold;
-  color: #333333;
+  color: white;
 }
+
 .row.g-4 {
   margin-top: 60px; /* Espacio para la primera fila con imágenes */
+  margin-bottom: 50px;
 }
 
 @media (max-width: 767px) {
@@ -218,6 +241,51 @@ header {
     transform: translateX(-50%); /* Mueve todo el contenedor para un flujo infinito */
   }
 }
+
+
+/* IMÁGENES */
+
+/* Contenedor de las imágenes */
+.image-container {
+  display: flex;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  height: auto; /* Ocupa toda la altura de la ventana */
+  margin: 0;
+  padding: 0;
+  justify-content: space-between; /* Asegura que haya espacio entre las imágenes en pantallas grandes */
+}
+
+/* Estilo para los enlaces */
+
+.image-link {
+  display: block;
+  flex: 1; /* Hace que cada enlace ocupe el mismo espacio */
+  height: 100%; /* Ocupa toda la altura */
+  padding: 0; /* Elimina cualquier espacio extra alrededor de la imagen */
+  margin: 0; /* Elimina márgenes que puedan causar espacio extra */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+}
+
+/* Estilo para las imágenes */
+.image {
+  width: 100%; /* Las imágenes ocuparán el 100% del espacio del contenedor */
+  height: 100%; /* Las imágenes ocuparán toda la altura del contenedor */
+  object-fit: contain; /* Asegura que las imágenes se ajusten dentro del contenedor sin cortarse */
+}
+
+/* Media query para pantallas más pequeñas (iPads, teléfonos) */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Cambia a columna, apilando las imágenes */
+    height: auto; /* Deja que las imágenes se ajusten a su altura natural */
+  }
+
+  .image-link {
+    margin-bottom: 0; /* Elimina el margen entre las imágenes en pantallas pequeñas */
+  }
+}
+
+
 
 
 /* CONTACTO-INFO */

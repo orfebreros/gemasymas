@@ -1,7 +1,7 @@
 // TARJETAS Y MODAL
 
-document.querySelectorAll('.flip-card-btn').forEach(button => {
-  button.addEventListener('click', function () {
+document.querySelectorAll('.card-container').forEach(card => {
+  card.addEventListener('click', function () {
     const images = this.getAttribute('data-image').split(',');
     const title = this.getAttribute('data-title');
     const details = this.getAttribute('data-details');
@@ -25,7 +25,7 @@ document.querySelectorAll('.flip-card-btn').forEach(button => {
     });
 
     // Obtener la tarjeta actual
-    const card = this.closest('.card');
+    const card = this.querySelector('.card');
     card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
 
     // Mostrar la modal después de un ligero retraso para que el desvanecimiento sea visible
@@ -34,9 +34,8 @@ document.querySelectorAll('.flip-card-btn').forEach(button => {
       modal.show();
 
       // Restablecer la tarjeta cuando la modal se cierra
-      const modalElement = document.getElementById('infoModal');
-      modalElement.addEventListener('hidden.bs.modal', () => {
-        card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
+      document.getElementById('infoModal').addEventListener('hidden.bs.modal', () => {
+        card.classList.remove('hide'); // Hacer que la tarjeta vuelva a aparecer
       });
     }, 100); // Trabaja con el estilo de la clase modal-flip
   });
