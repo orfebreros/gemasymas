@@ -5,14 +5,6 @@ body {
   box-sizing: border-box;
 }
 
-.estetica-divs{
-  padding: 2%;
-}
-
-.h2-style{
-  text-align: center;
-}
-
 
 /* HEADER Y NAVBAR */
 
@@ -59,12 +51,8 @@ header {
 
 .negocio {
   text-align: center;
-}
-
-@media (max-width: 767px) {
-  .negocio{
-    margin-top: 50px;
-  }
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 
@@ -82,14 +70,6 @@ header {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* .card-body {
-  background: linear-gradient(to bottom, white, #192e5a);
-}
-
-.card-body h5 {
-  color: white; /* Cambia el color del texto */
-/*} */
-
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
@@ -100,8 +80,8 @@ header {
 }
 
 .flip-card-btn{
-  background-color: #192e5a !important;
-  color: white !important;
+  background-color: #192e5a;
+  color: white;
 }
 
 @keyframes flipIn {
@@ -136,18 +116,21 @@ header {
 
 .clientes-satisfechos{
   background-color: black;
+  margin-top: 100px;
 }
 
 .clientes-satisfechos h2{
   color: white;
-  margin: 75px 0;
+  padding-top: 100px;
+  margin: 0;
+  text-align: center;
 }
 
 .testimonial-card {
   text-align: center;
   border: 1px solid #292929;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px; /*VER SI ESTA*/
   background-color: 393939;
   position: relative; /* Necesario para posicionar la imagen */
   margin: 0px 0px; /* Espacio entre las tarjetas verticalmente */
@@ -178,18 +161,10 @@ header {
 }
 
 .row.g-4 {
-  margin-top: 60px; /* Espacio para la primera fila con imágenes */
-  margin-bottom: 50px;
-}
-
-@media (max-width: 767px) {
-  #cliente2, #cliente3{
-    margin-top: 50px;
-  }
-
-  #cliente3{
-    margin-bottom: 40px;
-  }
+  margin-top: 100px; /* Espacio para la primera fila con imágenes */
+  padding-bottom: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 
@@ -199,15 +174,11 @@ header {
   overflow: hidden; /* Ocultar logos fuera de los límites */
 }
 
-@media (min-width: 992px) { /* Para pantallas grandes en adelante */
-  .brands-section {
-    overflow: hidden; /* Ocultar logos fuera de los límites */
-  }
-
-  .brands-container{
-    padding-top: 40px;
-    padding-bottom: 60px;
-  }
+.brands-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 /* Contenedor de los logos */
@@ -246,18 +217,18 @@ header {
 /* IMÁGENES */
 
 /* Contenedor de las imágenes */
-.image-container {
+.images-container {
   display: flex;
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
   height: auto; /* Ocupa toda la altura de la ventana */
   margin: 0;
+  margin-top: 50px;
   padding: 0;
   justify-content: space-between; /* Asegura que haya espacio entre las imágenes en pantallas grandes */
 }
 
 /* Estilo para los enlaces */
-
-.image-link {
+.images-link {
   display: block;
   flex: 1; /* Hace que cada enlace ocupe el mismo espacio */
   height: 100%; /* Ocupa toda la altura */
@@ -267,28 +238,18 @@ header {
 }
 
 /* Estilo para las imágenes */
-.image {
+.images {
   width: 100%; /* Las imágenes ocuparán el 100% del espacio del contenedor */
   height: 100%; /* Las imágenes ocuparán toda la altura del contenedor */
   object-fit: contain; /* Asegura que las imágenes se ajusten dentro del contenedor sin cortarse */
 }
 
-/* Media query para pantallas más pequeñas (iPads, teléfonos) */
-@media (max-width: 768px) {
-  .image-container {
-    flex-direction: column; /* Cambia a columna, apilando las imágenes */
-    height: auto; /* Deja que las imágenes se ajusten a su altura natural */
-  }
-
-  .image-link {
-    margin-bottom: 0; /* Elimina el margen entre las imágenes en pantallas pequeñas */
-  }
-}
-
-
-
 
 /* CONTACTO-INFO */
+
+.contact-container{
+  margin-top: 100px;
+}
 
 .logo-contact {
   margin: 0 auto 20px auto;
@@ -308,7 +269,7 @@ header {
 .social-icon {
   text-decoration: none;
   color: #333; /* Color inicial del ícono */
-  font-size: 40px; /* Tamaño de los íconos */
+  font-size: 30px; /* Tamaño de los íconos */
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -325,6 +286,18 @@ header {
 .color-label-name{
   color: #192e5a;
 }
+
+.form-control {
+  border: 1px solid #026322;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control:focus {
+  border-color: #026322; /* Cambia el borde */
+  box-shadow: 0px 0px 10px rgba(0, 255, 102, 0.501); /* Efecto de brillo */
+  outline: none;
+}
+
 
 .btn-submit {
   border-color: #026322;
@@ -370,4 +343,98 @@ header {
 
 .whatsapp-button:hover {
   transform: scale(1.1);
+}
+
+
+
+@media (min-width: 992px) { /* Para pantallas grandes en adelante */
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Comienza transparente */
+    z-index: 1050;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out; /* Transición suave */
+  }
+  
+  .navbar.scrolled .nav-link {
+    color: white;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px;
+    margin-left: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    color: black;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar.scrolled .nav-link {
+    color: white;
+  }
+
+  .image-container {
+    margin-top: 0px;
+  }
+
+  .brands-section {
+    overflow: hidden; /* Ocultar logos fuera de los límites */
+  }
+
+  .brands-container{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+
+  /* NEGOCIO */
+
+  .negocio{
+    margin: 50px 20px;
+  }
+
+
+  /* CLIENTES SATISFECHOS */
+
+  .clientes-satisfechos h2{
+    padding-top: 75px;
+  }
+
+  .row.g-4 {
+    padding-bottom: 100px;
+  }
+
+  #cliente2, #cliente3{
+    margin-top: 50px;
+  }
+
+
+  /* IMÁGENES */
+
+  .images-container {
+    flex-direction: column; /* Cambia a columna, apilando las imágenes */
+    height: auto; /* Deja que las imágenes se ajusten a su altura natural */
+  }
+
+  .images-link {
+    margin-bottom: 0; /* Elimina el margen entre las imágenes en pantallas pequeñas */
+  }
+
+  /* CONTACTO-INFO */
+
+  .contact-container{
+    margin-top: 25px !important;
+  }
 }
