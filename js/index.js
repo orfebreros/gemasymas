@@ -28,47 +28,76 @@ window.addEventListener("scroll", function () {
 });
 
 
-// TARJETAS Y MODAL
-
+// TARJETAS Y MODAL DE PIEDRAS
 document.querySelectorAll('.card-container').forEach(card => {
   card.addEventListener('click', function () {
     const images = this.getAttribute('data-image').split(',');
-    const title = this.getAttribute('data-title');
-    const details = this.getAttribute('data-details');
 
-    // Actualizar contenido de la modal
-    document.getElementById('modalProductTitle').textContent = title;
-    document.getElementById('modalProductDetails').textContent = details;
-    
-    // Crear las imágenes del carousel
-    const carouselInner = document.getElementById('carouselImages');
-    carouselInner.innerHTML = ''; // Limpiar las imágenes previas
-
-    images.forEach((image, index) => {
-      const activeClass = index === 0 ? 'active' : ''; // La primera imagen estará activa
-      const carouselItem = `
-        <div class="carousel-item ${activeClass}">
-          <img src="${image}" class="d-block" alt="Producto" style="width: 100%; height: 100%;">
-        </div>
-      `;
-      carouselInner.innerHTML += carouselItem; // Agregar la imagen al carousel
-    });
-
-    // Obtener la tarjeta actual
-    const card = this.querySelector('.card');
-    card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
-
-    // Mostrar la modal después de un ligero retraso para que el desvanecimiento sea visible
-    setTimeout(() => {
-      const modal = new bootstrap.Modal(document.getElementById('infoModal'));
-      modal.show();
-
-      // Restablecer la tarjeta cuando la modal se cierra
-      document.getElementById('infoModal').addEventListener('hidden.bs.modal', () => {
-        card.classList.remove('hide'); // Hacer que la tarjeta vuelva a aparecer
+      // Actualizar la información de la modal
+      document.getElementById('modalProductTitle').textContent = this.getAttribute('data-title');
+      document.getElementById('modalProductDetails').textContent = this.getAttribute('data-details');
+      document.getElementById('modalProductMeasurements').textContent = this.getAttribute('data-measurements');
+      document.getElementById('modalProductColors').textContent = this.getAttribute('data-colors');
+      
+      // Crear las imágenes del carousel
+      const carouselInner = document.getElementById('carouselImages');
+      carouselInner.innerHTML = ''; // Limpiar las imágenes previas
+  
+      images.forEach((image, index) => {
+          const activeClass = index === 0 ? 'active' : ''; // La primera imagen estará activa
+          const carouselItem = `
+          <div class="carousel-item ${activeClass}">
+              <img src="${image}" class="d-block" alt="Piedras" style="width: 100%; height: 100%;">
+          </div>
+          `;
+          carouselInner.innerHTML += carouselItem; // Agregar la imagen al carousel
       });
-    }, 100); // Trabaja con el estilo de la clase modal-flip
+  
+      // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
+      const card = this.querySelector('.card'); // Obtener la tarjeta actual
+      card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
+  
+      // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
+      setTimeout(() => {
+          const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+          modal.show();
+  
+          // Restablecer la tarjeta cuando la modal se cierra
+          const modalElement = document.getElementById('infoModal');
+          modalElement.addEventListener('hidden.bs.modal', () => {
+          card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
+          });
+      }, 100); // Trabaja con el estilo de la clase modal-flip
   });
+});
+
+// TARJETAS Y MODAL DE HERRAMIENTAS
+document.querySelectorAll('.card-container-products').forEach(card => {
+  card.addEventListener('click', function () {
+      document.getElementById('modalToolImage').src = this.getAttribute('data-image');
+      document.getElementById('modalToolTitle').textContent = this.getAttribute('data-title');
+      document.getElementById('modalToolDetails').textContent = this.getAttribute('data-details');
+      document.getElementById('modalToolAttribute1').textContent = this.getAttribute('attribute1');
+      document.getElementById('modalToolAttribute2').textContent = this.getAttribute('attribute2');
+      document.getElementById('modalToolAttribute3').textContent = this.getAttribute('attribute3');
+      document.getElementById('modalToolAttribute4').textContent = this.getAttribute('attribute4');
+
+      // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
+      const card = this.querySelector('.card'); // Obtener la tarjeta actual
+      card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
+  
+      // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
+      setTimeout(() => {
+          const modal = new bootstrap.Modal(document.getElementById('infoToolModal'));
+          modal.show();
+  
+          // Restablecer la tarjeta cuando la modal se cierra
+          const modalElement = document.getElementById('infoToolModal');
+          modalElement.addEventListener('hidden.bs.modal', () => {
+          card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
+          });
+      }, 100); // Trabaja con el estilo de la clase modal-flip
+    });
 });
 
   
