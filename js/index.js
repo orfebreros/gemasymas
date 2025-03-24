@@ -5,18 +5,28 @@ window.addEventListener("scroll", function () {
   let navbar = document.querySelector(".navbar");
 
   let scrollY = window.scrollY;
-  let opacity = Math.min(scrollY / 100, 1); // Ajusta el valor máximo de opacidad
 
-  // Cambiar el color de fondo con opacidad gradual
-  header.style.backgroundColor = `rgba(25, 46, 90, ${opacity})`; // Fondo azul con opacidad ajustada
+  if (window.innerWidth > 767) {
+    let opacity = Math.min(scrollY / 100, 1); // Ajusta el valor máximo de opacidad
 
-  // Cambiar el color de texto de la navbar
-  if (scrollY > 0) {
-    navbar.classList.add("scrolled");
+    // Cambiar el color de fondo con opacidad gradual
+    header.style.backgroundColor = `rgba(25, 46, 90, ${opacity})`; // Fondo azul con opacidad ajustada
+
+    // Cambiar el color de texto de la navbar
+    if (scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
   } else {
-    navbar.classList.remove("scrolled");
+    if (scrollY === 0) {
+      // Si estamos al principio de la página, no cambiar el fondo
+      header.style.backgroundColor = '#192e5a'; // Color fijo en pantallas pequeñas
+    }
+    navbar.classList.remove("scrolled"); // No aplicamos el cambio de color en el navbar
   }
 });
+
 
 // TARJETAS Y MODAL
 
