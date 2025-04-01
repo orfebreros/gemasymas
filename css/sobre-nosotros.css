@@ -5,14 +5,6 @@ body {
     box-sizing: border-box;
 }
 
-.estetica-divs{
-    padding: 2%;
-}
-
-.h2-style{
-    text-align: center;
-}
-
 
 /* HEADER Y NAVBAR */
 
@@ -40,35 +32,48 @@ header {
   }
 
 
-/* SOBRE NOSOSTROS */
+/* SOBRE NOSOSTROS Y LÍNEA PRINCIPAL*/
 
-.about-us{
-    margin-top: 100px;
+.sobre-nosotros{
+    margin-top: 200px;
 }
 
-@media (max-width: 767px) {
-    .linea-principal{
-        margin-bottom: 50px;
-    }
+.imagen-principal {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Ajusta los valores según tu preferencia */
+}
+
+.linea-principal{
+  margin-top: 100px;
+}
+
+
+/* VISIÓN, MISIÓN Y VALORES */
+
+.vmv{
+  margin-top: 100px;
+}
+
+.espacio{
+  margin-top: 50px;
 }
 
 .about-us-images-container{
-    text-align: center;
+  text-align: center;
 }
 
 .about-us-images{
-    max-width: 300px; /* El ancho máximo es el 100% del contenedor */
-    max-height: 300px; /* El alto máximo es 100px */
-    width: auto; /* Permite ajustar el ancho automáticamente */
-    height: auto; /* Permite ajustar la altura automáticamente */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Ajusta los valores según tu preferencia */
+  max-width: 80%; /* El ancho máximo es el 100% del contenedor */
+  max-height: 80%; /* El alto máximo es 100px */
+  width: auto; /* Permite ajustar el ancho automáticamente */
+  height: auto; /* Permite ajustar la altura automáticamente */
 }
-
 
 
 /* CONTACTO-INFO */
 
 .contact-container{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .logo-contact {
@@ -99,8 +104,8 @@ header {
     color: #026322; /* Cambia de color al hacer hover */
   }
 }
-  
-  
+
+
 /* CONTACTO-FORMULARIO */
 
 .color-label-name{
@@ -162,4 +167,29 @@ header {
 
 .whatsapp-button:hover {
   transform: scale(1.1);
+}
+
+
+
+@media (max-width: 767px) {
+  .sobre-nosotros{
+    margin-top: 125px;
+  }
+
+  .sobre-nosotros h1{
+    margin-bottom: 25px;
+  }
+
+  .imagen-principal {
+    margin-top: 50px;
+  }
+
+  .linea-principal{
+      margin-bottom: 50px;
+  }
+
+  .about-us-images-container{
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
 }
