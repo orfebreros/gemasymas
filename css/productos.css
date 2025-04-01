@@ -190,8 +190,8 @@ header {
 
 /* CONTACTO-INFO */
 
-#secContacto{
-  margin-top: 92px;
+.contact-container{
+  margin-top: 100px;
 }
 
 .logo-contact {
@@ -212,7 +212,7 @@ header {
 .social-icon {
   text-decoration: none;
   color: #333; /* Color inicial del ícono */
-  font-size: 40px; /* Tamaño de los íconos */
+  font-size: 30px; /* Tamaño de los íconos */
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -228,6 +228,17 @@ header {
 
 .color-label-name{
   color: #192e5a;
+}
+
+.form-control {
+  border: 0.5px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control:focus {
+  border-color: black; /* Cambia el borde */
+  box-shadow: 0px 0px 5px black; /* Efecto de brillo */
+  outline: none;
 }
 
 .btn-submit {
