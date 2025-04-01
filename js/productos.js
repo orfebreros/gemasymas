@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('config.json')
   .then(response => response.json())
   .then(data => {
-  document.getElementById('_next').value = data.prodUrl + 'productos.html#secContacto';
+  document.getElementById('_next').value = data.prodUrl + 'sobre-nosotros.html#secContacto';
   })
   .catch(error => console.error('Error al cargar archivo JSON:', error));
 

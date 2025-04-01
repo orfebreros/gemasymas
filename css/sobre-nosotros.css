@@ -108,13 +108,13 @@ header {
 }
 
 .form-control {
-  border: 1px solid #026322;
+  border: 0.5px solid black;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .form-control:focus {
-  border-color: #026322; /* Cambia el borde */
-  box-shadow: 0px 0px 5px #026322; /* Efecto de brillo */
+  border-color: black; /* Cambia el borde */
+  box-shadow: 0px 0px 5px black; /* Efecto de brillo */
   outline: none;
 }
 
