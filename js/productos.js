@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // TARJETAS Y MODAL DE PIEDRAS
-  document.querySelectorAll('.flip-card-btn').forEach(button => {
-      button.addEventListener('click', function () {
+  document.querySelectorAll('.card-container').forEach(card => {
+    card.addEventListener('click', function () {
           const images = this.getAttribute('data-image').split(',');
 
           // Actualizar la información de la modal
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
           });
       
           // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
-          const card = this.closest('.card'); // Obtener la tarjeta actual
+          const card = this.querySelector('.card'); // Obtener la tarjeta actual
           card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
       
           // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // TARJETAS Y MODAL DE HERRAMIENTAS
-  document.querySelectorAll('.flip-card-tools-btn').forEach(button => {
-      button.addEventListener('click', function () {
+  document.querySelectorAll('.card-container-products').forEach(card => {
+    card.addEventListener('click', function () {
           document.getElementById('modalToolImage').src = this.getAttribute('data-image');
           document.getElementById('modalToolTitle').textContent = this.getAttribute('data-title');
           document.getElementById('modalToolDetails').textContent = this.getAttribute('data-details');
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('modalToolAttribute32').textContent = this.getAttribute('attribute32');
 
           // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
-          const card = this.closest('.card'); // Obtener la tarjeta actual
+          const card = this.querySelector('.card'); // Obtener la tarjeta actual
           card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
       
           // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
