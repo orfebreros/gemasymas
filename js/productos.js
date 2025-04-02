@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
-    }
+    //function toggleSidebar() {
+      //  const sidebar = document.getElementById('sidebar');
+      //  sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
+    //}
     
   const checkboxes = document.querySelectorAll('input[type="checkbox"]'); // Selecciona los checkboxes
   const productosContainer = document.querySelector(".productos-container"); // Contenedor de productos
-  const tarjetas = Array.from(document.querySelectorAll(".card-container")); // Contenedor de tarjetas
+  const tarjetas = Array.from(document.querySelectorAll(".card-container, .card-container-products")); // Contenedor de tarjetas
 
   function filtrarProductos() {
       const seleccionados = Array.from(checkboxes)
@@ -88,58 +88,58 @@ document.addEventListener("DOMContentLoaded", function() {
   // TARJETAS Y MODAL DE HERRAMIENTAS
   document.querySelectorAll('.card-container-products').forEach(card => {
     card.addEventListener('click', function () {
-          document.getElementById('modalToolImage').src = this.getAttribute('data-image');
-          document.getElementById('modalToolTitle').textContent = this.getAttribute('data-title');
-          document.getElementById('modalToolDetails').textContent = this.getAttribute('data-details');
-          document.getElementById('modalToolAttribute1').textContent = this.getAttribute('attribute1');
-          document.getElementById('modalToolAttribute2').textContent = this.getAttribute('attribute2');
-          document.getElementById('modalToolAttribute3').textContent = this.getAttribute('attribute3');
-          document.getElementById('modalToolAttribute4').textContent = this.getAttribute('attribute4');
-          document.getElementById('modalToolAttribute5').textContent = this.getAttribute('attribute5');
-          document.getElementById('modalToolAttribute6').textContent = this.getAttribute('attribute6');
-          document.getElementById('modalToolAttribute7').textContent = this.getAttribute('attribute7');
-          document.getElementById('modalToolAttribute8').textContent = this.getAttribute('attribute8');
-            document.getElementById('modalToolAttribute9').textContent = this.getAttribute('attribute9');
-            document.getElementById('modalToolAttribute10').textContent = this.getAttribute('attribute10');
-            document.getElementById('modalToolAttribute11').textContent = this.getAttribute('attribute11');
-            document.getElementById('modalToolAttribute12').textContent = this.getAttribute('attribute12');
-            document.getElementById('modalToolAttribute13').textContent = this.getAttribute('attribute13');
-            document.getElementById('modalToolAttribute14').textContent = this.getAttribute('attribute14');
-            document.getElementById('modalToolAttribute15').textContent = this.getAttribute('attribute15');
-            document.getElementById('modalToolAttribute16').textContent = this.getAttribute('attribute16');
-            document.getElementById('modalToolAttribute17').textContent = this.getAttribute('attribute17');
-            document.getElementById('modalToolAttribute18').textContent = this.getAttribute('attribute18');
-            document.getElementById('modalToolAttribute19').textContent = this.getAttribute('attribute19');
-            document.getElementById('modalToolAttribute20').textContent = this.getAttribute('attribute20');
-            document.getElementById('modalToolAttribute21').textContent = this.getAttribute('attribute21');
-            document.getElementById('modalToolAttribute22').textContent = this.getAttribute('attribute22');
-            document.getElementById('modalToolAttribute23').textContent = this.getAttribute('attribute23');
-            document.getElementById('modalToolAttribute24').textContent = this.getAttribute('attribute24');
-            document.getElementById('modalToolAttribute25').textContent = this.getAttribute('attribute25');
-            document.getElementById('modalToolAttribute26').textContent = this.getAttribute('attribute26');
-            document.getElementById('modalToolAttribute27').textContent = this.getAttribute('attribute27');
-            document.getElementById('modalToolAttribute28').textContent = this.getAttribute('attribute28');
-            document.getElementById('modalToolAttribute29').textContent = this.getAttribute('attribute29');
-            document.getElementById('modalToolAttribute30').textContent = this.getAttribute('attribute30');
-            document.getElementById('modalToolAttribute31').textContent = this.getAttribute('attribute31');
-            document.getElementById('modalToolAttribute32').textContent = this.getAttribute('attribute32');
+        document.getElementById('modalToolImage').src = this.getAttribute('data-image');
+        document.getElementById('modalToolTitle').textContent = this.getAttribute('data-title');
+        document.getElementById('modalToolDetails').textContent = this.getAttribute('data-details');
+        document.getElementById('modalToolAttribute1').textContent = this.getAttribute('attribute1');
+        document.getElementById('modalToolAttribute2').textContent = this.getAttribute('attribute2');
+        document.getElementById('modalToolAttribute3').textContent = this.getAttribute('attribute3');
+        document.getElementById('modalToolAttribute4').textContent = this.getAttribute('attribute4');
+        document.getElementById('modalToolAttribute5').textContent = this.getAttribute('attribute5');
+        document.getElementById('modalToolAttribute6').textContent = this.getAttribute('attribute6');
+        document.getElementById('modalToolAttribute7').textContent = this.getAttribute('attribute7');
+        document.getElementById('modalToolAttribute8').textContent = this.getAttribute('attribute8');
+        document.getElementById('modalToolAttribute9').textContent = this.getAttribute('attribute9');
+        document.getElementById('modalToolAttribute10').textContent = this.getAttribute('attribute10');
+        document.getElementById('modalToolAttribute11').textContent = this.getAttribute('attribute11');
+        document.getElementById('modalToolAttribute12').textContent = this.getAttribute('attribute12');
+        document.getElementById('modalToolAttribute13').textContent = this.getAttribute('attribute13');
+        document.getElementById('modalToolAttribute14').textContent = this.getAttribute('attribute14');
+        document.getElementById('modalToolAttribute15').textContent = this.getAttribute('attribute15');
+        document.getElementById('modalToolAttribute16').textContent = this.getAttribute('attribute16');
+        document.getElementById('modalToolAttribute17').textContent = this.getAttribute('attribute17');
+        document.getElementById('modalToolAttribute18').textContent = this.getAttribute('attribute18');
+        document.getElementById('modalToolAttribute19').textContent = this.getAttribute('attribute19');
+        document.getElementById('modalToolAttribute20').textContent = this.getAttribute('attribute20');
+        document.getElementById('modalToolAttribute21').textContent = this.getAttribute('attribute21');
+        document.getElementById('modalToolAttribute22').textContent = this.getAttribute('attribute22');
+        document.getElementById('modalToolAttribute23').textContent = this.getAttribute('attribute23');
+        document.getElementById('modalToolAttribute24').textContent = this.getAttribute('attribute24');
+        document.getElementById('modalToolAttribute25').textContent = this.getAttribute('attribute25');
+        document.getElementById('modalToolAttribute26').textContent = this.getAttribute('attribute26');
+        document.getElementById('modalToolAttribute27').textContent = this.getAttribute('attribute27');
+        document.getElementById('modalToolAttribute28').textContent = this.getAttribute('attribute28');
+        document.getElementById('modalToolAttribute29').textContent = this.getAttribute('attribute29');
+        document.getElementById('modalToolAttribute30').textContent = this.getAttribute('attribute30');
+        document.getElementById('modalToolAttribute31').textContent = this.getAttribute('attribute31');
+        document.getElementById('modalToolAttribute32').textContent = this.getAttribute('attribute32');
 
-          // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
-          const card = this.querySelector('.card'); // Obtener la tarjeta actual
-          card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
+        // Desaparecer la tarjeta actual, (efecto de levantar la tarjeta)
+        const card = this.querySelector('.card'); // Obtener la tarjeta actual
+        card.classList.add('hide'); // Agregar la clase 'hide' para desaparecer la tarjeta
       
-          // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
-          setTimeout(() => {
-              const modal = new bootstrap.Modal(document.getElementById('infoToolModal'));
-              modal.show();
-      
-              // Restablecer la tarjeta cuando la modal se cierra
-              const modalElement = document.getElementById('infoToolModal');
-              modalElement.addEventListener('hidden.bs.modal', () => {
-              card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
-              });
-          }, 100); // Trabaja con el estilo de la clase modal-flip
-      });
+        // Mostrar la modal con un efecto de vuelta, después de un ligero retraso
+        setTimeout(() => {
+            const modal = new bootstrap.Modal(document.getElementById('infoToolModal'));
+            modal.show();
+
+            // Restablecer la tarjeta cuando la modal se cierra
+            const modalElement = document.getElementById('infoToolModal');
+            modalElement.addEventListener('hidden.bs.modal', () => {
+            card.classList.remove('hide'); // Eliminar la clase 'hide' para hacer que la tarjeta vuelva a aparecer
+            });
+        }, 100); // Trabaja con el estilo de la clase modal-flip
+    });
   });
 
 
