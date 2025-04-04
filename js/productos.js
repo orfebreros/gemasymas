@@ -1,9 +1,44 @@
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.getElementById("menuBtn");
+    const isVisible = sidebar.classList.toggle("show-sidebar");
+
+    if (isVisible) {
+        menuBtn.style.display = "none";
+    } else {
+        menuBtn.style.display = "block";
+    }
+}
+
+function toggleSubcategories() {
+    const sub = document.querySelector(".subcategory");
+    const arrow = document.getElementById('tools-arrow');
+
+
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+
+    
+    // Cambia la dirección de la flecha
+    sub.classList.toggle('active');
+    if (sub.classList.contains('active')) {
+        arrow.classList.remove('bi-chevron-down');
+        arrow.classList.add('bi-chevron-right');
+    } else {
+        arrow.classList.remove('bi-chevron-right');
+        arrow.classList.add('bi-chevron-down');
+    }
+}
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
-    //function toggleSidebar() {
-      //  const sidebar = document.getElementById('sidebar');
-      //  sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
-    //}
+    const subcategory = document.querySelector(".subcategory");
+    subcategory.style.display = "block";  // Asegura que las subcategorías estén colapsadas al inicio
+
+    
     
   const checkboxes = document.querySelectorAll('input[type="checkbox"]'); // Selecciona los checkboxes
   const productosContainer = document.querySelector(".productos-container"); // Contenedor de productos
