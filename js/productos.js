@@ -12,15 +12,32 @@ function toggleSidebar() {
 }
 
 // SUBCATEGORÍAS Y FLECHAS
-function toggleSubcategories() {
-    const sub = document.querySelector(".subcategory");
-    const arrow = document.getElementById('tools-arrow');
+function toggleSubcategory2() {
+    const subcategory2 = document.querySelector(".subcategory2");
+    const arrow = document.getElementById('tools-arrow2');
 
-    sub.style.display = sub.style.display === "block" ? "none" : "block";
+    subcategory2.style.display = subcategory2.style.display === "block" ? "none" : "block";
     
     // Cambia la dirección de la flecha
-    sub.classList.toggle('active');
-    if (sub.classList.contains('active')) {
+    subcategory2.classList.toggle('active');
+    if (subcategory2.classList.contains('active')) {
+        arrow.classList.remove('bi-chevron-down');
+        arrow.classList.add('bi-chevron-right');
+    } else {
+        arrow.classList.remove('bi-chevron-right');
+        arrow.classList.add('bi-chevron-down');
+    }
+}
+
+function toggleSubcategory3() {
+    const subcategory3 = document.querySelector(".subcategory3");
+    const arrow = document.getElementById('tools-arrow3');
+
+    subcategory3.style.display = subcategory3.style.display === "block" ? "none" : "block";
+    
+    // Cambia la dirección de la flecha
+    subcategory3.classList.toggle('active');
+    if (subcategory3.classList.contains('active')) {
         arrow.classList.remove('bi-chevron-down');
         arrow.classList.add('bi-chevron-right');
     } else {
@@ -31,8 +48,11 @@ function toggleSubcategories() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const subcategory = document.querySelector(".subcategory");
-    subcategory.style.display = "block";  // Asegura que las subcategorías estén colapsadas al inicio
+    const subcategory2 = document.querySelector(".subcategory2");
+    subcategory2.style.display = "block";  // Asegura que las subcategorías estén abiertas al inicio
+
+    const subcategory3 = document.querySelector(".subcategory3");
+    subcategory3.style.display = "block";  // Asegura que las subcategorías estén abiertas al inicio
 
     const checkboxes = document.querySelectorAll('input[type="checkbox"]'); // Selecciona los checkboxes
     const productosContainer = document.querySelector(".productos-container"); // Contenedor de productos
