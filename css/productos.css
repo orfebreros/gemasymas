@@ -53,13 +53,14 @@ header {
   margin-bottom: 30px;
 }
 
-.category {
-  margin: 10px 0;
+.category1, .category2, .category3 {
+  margin: 20px 0;
   cursor: pointer;
 }
 
-.subcategory {
-  display: none; /* Las subcategorías estarán colapsadas por defecto */
+.subcategory2 input, .subcategory3 input{
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 15px;
 }
 
@@ -80,6 +81,9 @@ header {
   z-index: 1101;
 }
 
+#ultimo_div_sidebar{
+  margin-bottom: 25px;
+}
 
 /* BOTÓN DE FILTROS  (ABRIR SIDEBAR) */
 
@@ -267,7 +271,8 @@ header {
   .sidebar {
       transform: translateX(-100%);
       position: fixed;
-      height: 100vh;
+      height: calc(100vh - 92px);
+      top: 92px;
   }
 
   .sidebar.show-sidebar {

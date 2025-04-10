@@ -54,9 +54,9 @@
     <div class="sidebar" id="sidebar">
         <span class="close-button" id="closeBtn" onclick="toggleSidebar()">&times;</span>
         <h2>Categorías</h2>
-        <div class="category"><input type="checkbox" data-categoria="piedras"> Piedras</div>
-        <div class="category" onclick="toggleSubcategories()">Herramientas <i id="tools-arrow" class="bi bi-chevron-down"></i></div>
-        <div class="subcategory">
+        <div class="category1"><input type="checkbox" data-categoria="piedras"> Piedras</div>
+        <div class="category2" onclick="toggleSubcategory2()">Herramientas <i id="tools-arrow2" class="bi bi-chevron-down"></i></div>
+        <div class="subcategory2">
           <div><input type="checkbox" data-categoria="abrasivos"> Abrasivos y accesorios de trabajo</div>
           <div><input type="checkbox" data-categoria="acidos"> Ácidos</div>
           <div><input type="checkbox" data-categoria="alicates"> Alicates y cortadores</div>
@@ -80,6 +80,13 @@
           <div><input type="checkbox" data-categoria="reparacion_de_relojes"> Reparación de relojes</div>
           <div><input type="checkbox" data-categoria="sierra_y_marco_de_sierras"> Sierra y marco de sierras</div>
           <div><input type="checkbox" data-categoria="vision"> Visión</div>     
+        </div>
+        <div class="category3" onclick="toggleSubcategory3()">Exhibición y embalaje <i id="tools-arrow3" class="bi bi-chevron-down"></i></div>
+        <div class="subcategory3">
+          <div><input type="checkbox" data-categoria="almohadillas"> Almohadillas</div>
+          <div><input type="checkbox" data-categoria="cajas"> Cajas</div>
+          <div><input type="checkbox" data-categoria="exhibidores"> Exhibidores</div>
+          <div id="ultimo_div_sidebar"><input type="checkbox" data-categoria="sobres"> Sobres</div>
         </div>
     </div>
 
