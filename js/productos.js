@@ -68,12 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Si no hay ningún filtro seleccionado, mostrar todas las tarjetas
         if (seleccionados.length === 0) {
+            window.scrollTo(0, 0); // Desplazar hacia arriba
             tarjetas.forEach(tarjeta => productosContainer.appendChild(tarjeta));
             return;
         }
 
         // Filtrar las tarjetas según la categoría seleccionada
         tarjetas.forEach(tarjeta => {
+            window.scrollTo(0, 0); // Desplazar hacia arriba
             const categoria = tarjeta.dataset.categoria; // Categoría de la tarjeta
             if (seleccionados.includes(categoria)) {
                 productosContainer.appendChild(tarjeta); // Solo agregar las que coincidan
