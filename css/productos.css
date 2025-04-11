@@ -64,13 +64,6 @@ header {
   margin-left: 15px;
 }
 
-.main-content {
-  margin-left: 310px;
-  padding: 50px;
-  transition: margin-left 0.3s ease;
-  margin-top: 130px;
-}
-
 .close-button {
   display: none;
   position: absolute;
@@ -85,6 +78,16 @@ header {
   margin-bottom: 25px;
 }
 
+
+.main-content {
+  width: 100%;
+  align-items: center;
+  margin-left: 310px; /* Espacio para el sidebar */
+  margin-top: 92px; /* Espacio para el header */
+  padding: 25px;
+  transition: margin-left 0.3s ease;
+}
+
 /* BOTÓN DE FILTROS  (ABRIR SIDEBAR) */
 
 .menu-button {
@@ -97,6 +100,8 @@ header {
   cursor: pointer;
   font-size: 16px;
   z-index: 1100;
+  margin: 20px 0;
+  margin-left: 25px;
 }
 
 
@@ -114,16 +119,26 @@ header {
   perspective: 1000px; /* Profundidad para el efecto 3D */
 }
 
-.hidden {
-  display: none !important;
-}
-
 .card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   transition: opacity 0.6s ease, transform 0.6s ease; /* Suavizar el volteo y opacidad */
   transform-style: preserve-3d; /* Habilitar el efecto 3D */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .card:hover {
@@ -305,5 +320,9 @@ header {
 
   .sidebar .close-button {
       display: block;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
