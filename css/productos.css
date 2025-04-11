@@ -119,10 +119,6 @@ header {
   perspective: 1000px; /* Profundidad para el efecto 3D */
 }
 
-.hidden {
-  display: none !important;
-}
-
 .card {
   width: 100%;
   max-width: 100%;
@@ -137,8 +133,12 @@ header {
 .card img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* o cover si querés llenar el contenedor */
+  object-fit: contain;
   display: block;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .card:hover {
