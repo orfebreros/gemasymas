@@ -65,10 +65,10 @@ header {
 }
 
 .main-content {
-  margin-left: 310px;
-  padding: 50px;
+  margin-left: 310px; /* Espacio para el sidebar */
+  margin-top: 92px; /* Espacio para el header */
+  padding: 25px;
   transition: margin-left 0.3s ease;
-  margin-top: 130px;
 }
 
 .close-button {
